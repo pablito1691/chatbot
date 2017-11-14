@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/vehiculos', function () {
+    return view('vehiculos')->with('vehiculos', \App\Vehiculo::all());
+});
