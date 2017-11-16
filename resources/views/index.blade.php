@@ -88,17 +88,19 @@
             </ol>
 
 
-            <div class="carousel-inner" role="listbox">
+
+
 
               @foreach($vehiculos as $vehiculo)
-            if($vehiculo->version->destacado ==1){
-              <div class="carousel-item active">
-                <a href="/pagina2"> <img width="900" height="350" src="img/destacadpos1.jpg" alt="{{$vehiculo->version->modelo->descripcion}}"> </a>
-              </div>
-
-                }
-                @endforeach
+              @if($vehiculo->destacado ==1)
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <a href="/pagina2"> <img width="900" height="350" src="img/destacados1.jpg" alt="{{$vehiculo->version->modelo->descripcion}}"> </a>
+                </div>
             </div>
+
+          @endif
+            @endforeach
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
