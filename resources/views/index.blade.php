@@ -21,15 +21,15 @@
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
+    <!--href vehiculo/id vehiculo-->
+      </head>
 
-  </head>
+      <body>
 
-  <body>
-
-    <!-- Navigation -->
+        <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Bienvenido</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +41,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" >About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Services</a>
@@ -60,18 +60,25 @@
       <div class="row">
 
         <div class="col-lg-3">
+          <!-- foreach($conjunto as $variable)
+           {
+           // operar con la variable;
+           }-->
+           <h1 class="my-4">AG USADOS</h1>
+           <div class="list-group">
+             <a href="#" class="list-group-item">Usados</a>
+             <a href="#" class="list-group-item">0 KM </a>
+             <a href="#" class="list-group-item"> Vendidos</a>
+           </div>
 
-          <h1 class="my-4">Shop Name</h1>
-          <div class="list-group">
-            <a href="#" class="list-group-item">Category 1</a>
-            <a href="#" class="list-group-item">Category 2</a>
-            <a href="#" class="list-group-item">Category 3</a>
-          </div>
-
-        </div>
-        <!-- /.col-lg-3 -->
+         </div>
+         <!-- /.col-lg-3 -->
 
         <div class="col-lg-9">
+          <!-- foreach($conjunto as $variable)
+           {
+           // operar con la variable;
+           }-->
 
           <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -79,15 +86,17 @@
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
+
+
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
-                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+                <a href="/pagina2"> <img width="900" height="350" src="img/destacados1.jpg" alt="First slide"> </a>
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+                <a href="/prueba"> <img width="900" height="350" src="img/destacados2.jpg" alt="Second slide"> </a>
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+                <a href=""> <img width="900" height="350" src="img/destacados3.jpg" alt="Third slide"></a>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -102,15 +111,15 @@
 
           <div class="row">
 
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <a href="http://127.0.0.1:8000/img/auto1.jpg"><img width="253" height="200" src="img/auto1.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item One</a>
+                    <a href="#">Nombre Auto 1</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5>$Precio 1</h5>
+                  <p class="card-text">Auto para vender</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -119,14 +128,15 @@
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card">
+                <a href="http://127.0.0.1:8000/img/auto2.jpg"><img width="253" height="200" src="/img/auto2.jpg" alt=""></a>
                 <div class="card-body">
+
                   <h4 class="card-title">
-                    <a href="#">Item Two</a>
+                    <a href="#">Nombre auto 2</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                  <h5>$Precio 2</h5>
+                  <p class="card-text">Descripción</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -135,14 +145,14 @@
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card">
+                <a href="http://127.0.0.1:8000/img/auto3.jpg"><img width="253" height="200" src="img/auto3.jpg" alt="Problema al cargar la foto"></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Three</a>
+                    <a href="#">Nombre auto 3</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5>$Precio 3</h5>
+                  <p class="card-text">Descripcion del tercer auto</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -151,14 +161,14 @@
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card">
+                <a href="http://127.0.0.1:8000/img/auto4.jpg"><img class="card-img-top" src="img/auto4.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Four</a>
+                    <a href="#">Auto 4</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5>$precio 4</h5>
+                  <p class="card-text">Descripcion 4</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -167,30 +177,31 @@
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card">
+                <a href="http://127.0.0.1:8000/img/auto5.jpg"><img width="253" height="200" src="img/auto5.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Five</a>
+                    <a href="#">Auto 5</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                  <h5>$Precio 5</h5>
+                  <p class="card-text">Descripcion 5</p>
                 </div>
                 <div class="card-footer">
+                  <progress value="70" max="100">70 %</progress>
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card">
+                <a onclick="alert('Click sobre la imagen del auto numero' + ' 6')"><img width="253" height="200" src="img/auto6.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Six</a>
+                    <a href="#">Auto 6</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5>$Precio 6</h5>
+                  <p class="card-text">Decripcion 6</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>

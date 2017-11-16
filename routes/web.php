@@ -27,3 +27,11 @@ Route::get('/vehiculo/{$id}', function ($id) {
 Route::get('/vehiculos', function () {
     return view('vehiculos')->with('vehiculos', Vehiculo::all());
 });
+
+Route::get('/pagina2', function () {
+    return view('pagina2');
+});
+
+Route::get('/prueba', function () {
+    return view('codigosPrueba');
+});
