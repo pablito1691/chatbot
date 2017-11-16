@@ -92,6 +92,12 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label class="control-label">Imagen</label>
+                                        <input type="file" class="form-control">
+                                    </div>
+                                </div>
                                 <button class="btn btn-primary btn-block">Agregar Vehiculo</button>
                             </div>
 
