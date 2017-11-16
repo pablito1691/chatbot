@@ -11,10 +11,15 @@
 |
 */
 
+use App\Marca;
 use App\Vehiculo;
 
 Route::get('/', function () {
     return view('index')->with('vehiculos',Vehiculo::all());
+});
+
+Route::get('/admin', function () {
+    return view('admin')->with('marcas', Marca::all());
 });
 
 Route::get('/vehiculo/{$id}', function ($id) {
