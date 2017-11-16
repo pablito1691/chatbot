@@ -13,9 +13,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property float $precio
  * @property int $destacado
  * @property int $year
- * @property Colore $colore
- * @property Versione $versione
- * @property Imagene[] $imagenes
+ * @property Color $colore
+ * @property Version $versione
+ * @property Imagen[] $imagenes
  */
 class Vehiculo extends Model
 {

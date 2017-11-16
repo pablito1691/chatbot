@@ -11,6 +11,7 @@
 |
 */
 
+use App\Color;
 use App\Marca;
 use App\Vehiculo;
 
@@ -19,7 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', function () {
-    return view('admin')->with('marcas', Marca::all());
+    return view('admin')->with('marcas', Marca::all())
+        ->with('colores', Color::all());
 })->middleware('auth');
 
 Route::get('/vehiculo/{$id}', function ($id) {
