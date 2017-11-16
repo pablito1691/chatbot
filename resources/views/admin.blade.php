@@ -26,8 +26,9 @@
                         <div class="form-group">
                             <label class="control-label">Seleccione la Marca</label>
                             <select>
-                                <option>Ford</option>
-                                <option>Volkswagen</option>
+                                @foreach($marcas as $marca)
+                                    <option>{{$marca->descripcion}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
