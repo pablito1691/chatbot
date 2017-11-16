@@ -14,7 +14,7 @@
 use App\Vehiculo;
 
 Route::get('/', function () {
-    return view('index');
+    return view('index')->with('vehiculos',Vehiculo::all());
 });
 
 Route::get('/vehiculo/{$id}', function ($id) {
