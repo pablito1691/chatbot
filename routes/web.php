@@ -11,10 +11,19 @@
 |
 */
 
+use App\Vehiculo;
+
 Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/vehiculo/{$id}', function ($id) {
+
+    $vehiculo = Vehiculo::where('idvehiculos',$id);
+
+    return view('vehiculo')->with('vehiculo', $vehiculo);
+});
+
 Route::get('/vehiculos', function () {
-    return view('vehiculos')->with('vehiculos', \App\Vehiculo::all());
+    return view('vehiculos')->with('vehiculos', Vehiculo::all());
 });
