@@ -35,7 +35,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="control-label">Seleccione la Marca</label>
-                                        <select class="form-control">
+                                        <select id="selectMarca" class="form-control">
                                             @foreach($marcas as $marca)
                                                 <option>{{$marca->descripcion}}</option>
                                             @endforeach
@@ -45,7 +45,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="control-label">Seleccione el modelo</label>
-                                        <select class="form-control">
+                                        <select id="selectModelo" class="form-control">
                                             <option>---------</option>
                                         </select>
                                     </div>
@@ -53,7 +53,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="control-label">Seleccione la version</label>
-                                        <select class="form-control">
+                                        <select id="selectVersion" class="form-control">
                                             <option>---------</option>
                                         </select>
                                     </div>
@@ -109,6 +109,14 @@
     </div>
 
 </div>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="http://carlosdeoliveira.net/jcombo/jquery.jCombo.min.js"></script>
+<script src="js/admin.js"></script>
 
 </body>
 
