@@ -111,103 +111,106 @@
 
           <div class="row">
 
+            @foreach($vehiculos as $vehiculo)
+
             <div class="col-lg-4 col-md-6">
               <div class="card">
                 <a href="http://127.0.0.1:8000/img/auto1.jpg"><img width="253" height="200" src="img/auto1.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Nombre Auto 1</a>
+                    <a href="#"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
                   </h4>
-                  <h5>$Precio 1</h5>
-                  <p class="card-text">Auto para vender</p>
+                  <h5>${{$vehiculo->precio}}</h5>
+                  <p class="card-text">{{$vehiculo->descripcion}}</p>
                 </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                </div>
+                {{--<div class="card-footer">--}}
+                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
+                {{--</div>--}}
               </div>
             </div>
+            @endforeach
 
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <a href="http://127.0.0.1:8000/img/auto2.jpg"><img width="253" height="200" src="/img/auto2.jpg" alt=""></a>
-                <div class="card-body">
+            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
+              {{--<div class="card">--}}
+                {{--<a href="http://127.0.0.1:8000/img/auto2.jpg"><img width="253" height="200" src="/img/auto2.jpg" alt=""></a>--}}
+                {{--<div class="card-body">--}}
 
-                  <h4 class="card-title">
-                    <a href="#">Nombre auto 2</a>
-                  </h4>
-                  <h5>$Precio 2</h5>
-                  <p class="card-text">Descripción</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                </div>
-              </div>
-            </div>
+                  {{--<h4 class="card-title">--}}
+                    {{--<a href="#">Nombre auto 2</a>--}}
+                  {{--</h4>--}}
+                  {{--<h5>$Precio 2</h5>--}}
+                  {{--<p class="card-text">Descripción</p>--}}
+                {{--</div>--}}
+                {{--<div class="card-footer">--}}
+                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
+                {{--</div>--}}
+              {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <a href="http://127.0.0.1:8000/img/auto3.jpg"><img width="253" height="200" src="img/auto3.jpg" alt="Problema al cargar la foto"></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Nombre auto 3</a>
-                  </h4>
-                  <h5>$Precio 3</h5>
-                  <p class="card-text">Descripcion del tercer auto</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                </div>
-              </div>
-            </div>
+            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
+              {{--<div class="card">--}}
+                {{--<a href="http://127.0.0.1:8000/img/auto3.jpg"><img width="253" height="200" src="img/auto3.jpg" alt="Problema al cargar la foto"></a>--}}
+                {{--<div class="card-body">--}}
+                  {{--<h4 class="card-title">--}}
+                    {{--<a href="#">Nombre auto 3</a>--}}
+                  {{--</h4>--}}
+                  {{--<h5>$Precio 3</h5>--}}
+                  {{--<p class="card-text">Descripcion del tercer auto</p>--}}
+                {{--</div>--}}
+                {{--<div class="card-footer">--}}
+                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
+                {{--</div>--}}
+              {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <a href="http://127.0.0.1:8000/img/auto4.jpg"><img class="card-img-top" src="img/auto4.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Auto 4</a>
-                  </h4>
-                  <h5>$precio 4</h5>
-                  <p class="card-text">Descripcion 4</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                </div>
-              </div>
-            </div>
+            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
+              {{--<div class="card">--}}
+                {{--<a href="http://127.0.0.1:8000/img/auto4.jpg"><img class="card-img-top" src="img/auto4.jpg" alt=""></a>--}}
+                {{--<div class="card-body">--}}
+                  {{--<h4 class="card-title">--}}
+                    {{--<a href="#">Auto 4</a>--}}
+                  {{--</h4>--}}
+                  {{--<h5>$precio 4</h5>--}}
+                  {{--<p class="card-text">Descripcion 4</p>--}}
+                {{--</div>--}}
+                {{--<div class="card-footer">--}}
+                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
+                {{--</div>--}}
+              {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <a href="http://127.0.0.1:8000/img/auto5.jpg"><img width="253" height="200" src="img/auto5.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Auto 5</a>
-                  </h4>
-                  <h5>$Precio 5</h5>
-                  <p class="card-text">Descripcion 5</p>
-                </div>
-                <div class="card-footer">
-                  <progress value="70" max="100">70 %</progress>
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                </div>
-              </div>
-            </div>
+            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
+              {{--<div class="card">--}}
+                {{--<a href="http://127.0.0.1:8000/img/auto5.jpg"><img width="253" height="200" src="img/auto5.jpg" alt=""></a>--}}
+                {{--<div class="card-body">--}}
+                  {{--<h4 class="card-title">--}}
+                    {{--<a href="#">Auto 5</a>--}}
+                  {{--</h4>--}}
+                  {{--<h5>$Precio 5</h5>--}}
+                  {{--<p class="card-text">Descripcion 5</p>--}}
+                {{--</div>--}}
+                {{--<div class="card-footer">--}}
+                  {{--<progress value="70" max="100">70 %</progress>--}}
+                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
+                {{--</div>--}}
+              {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <a onclick="alert('Click sobre la imagen del auto numero' + ' 6')"><img width="253" height="200" src="img/auto6.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Auto 6</a>
-                  </h4>
-                  <h5>$Precio 6</h5>
-                  <p class="card-text">Decripcion 6</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                </div>
-              </div>
-            </div>
+            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
+              {{--<div class="card">--}}
+                {{--<a onclick="alert('Click sobre la imagen del auto numero' + ' 6')"><img width="253" height="200" src="img/auto6.jpg" alt=""></a>--}}
+                {{--<div class="card-body">--}}
+                  {{--<h4 class="card-title">--}}
+                    {{--<a href="#">Auto 6</a>--}}
+                  {{--</h4>--}}
+                  {{--<h5>$Precio 6</h5>--}}
+                  {{--<p class="card-text">Decripcion 6</p>--}}
+                {{--</div>--}}
+                {{--<div class="card-footer">--}}
+                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
+                {{--</div>--}}
+              {{--</div>--}}
+            {{--</div>--}}
 
           </div>
           <!-- /.row -->
