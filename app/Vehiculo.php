@@ -24,6 +24,7 @@ class Vehiculo extends Model
      * 
      * @var string
      */
+
     protected $primaryKey = 'idvehiculos';
 
     /**
