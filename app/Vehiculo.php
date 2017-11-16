@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $descripcion
  * @property float $kilometros
  * @property float $precio
+ * @property int $destacado
  * @property int $year
  * @property Colore $colore
  * @property Versione $versione
@@ -28,7 +29,7 @@ class Vehiculo extends Model
     /**
      * @var array
      */
-    protected $fillable = ['colores_idcolores', 'versiones_idversiones', 'descripcion', 'kilometros', 'precio', 'year'];
+    protected $fillable = ['colores_idcolores', 'versiones_idversiones', 'descripcion', 'kilometros', 'precio', 'year', 'destacado'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

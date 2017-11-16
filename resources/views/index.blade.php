@@ -89,15 +89,15 @@
 
 
             <div class="carousel-inner" role="listbox">
+
+              @foreach($vehiculos as $vehiculo)
+            if($vehiculo->version->destacado ==1){
               <div class="carousel-item active">
-                <a href="/pagina2"> <img width="900" height="350" src="img/destacados1.jpg" alt="First slide"> </a>
+                <a href="/pagina2"> <img width="900" height="350" src="img/destacadpos1.jpg" alt="{{$vehiculo->version->modelo->descripcion}}"> </a>
               </div>
-              <div class="carousel-item">
-                <a href="/prueba"> <img width="900" height="350" src="img/destacados2.jpg" alt="Second slide"> </a>
-              </div>
-              <div class="carousel-item">
-                <a href=""> <img width="900" height="350" src="img/destacados3.jpg" alt="Third slide"></a>
-              </div>
+
+                }
+                @endforeach
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -110,6 +110,9 @@
           </div>
 
           <div class="row">
+
+
+            {{--CARDS DE LOS AUTOS--}}
 
             @foreach($vehiculos as $vehiculo)
 
@@ -129,88 +132,6 @@
               </div>
             </div>
             @endforeach
-
-            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
-              {{--<div class="card">--}}
-                {{--<a href="http://127.0.0.1:8000/img/auto2.jpg"><img width="253" height="200" src="/img/auto2.jpg" alt=""></a>--}}
-                {{--<div class="card-body">--}}
-
-                  {{--<h4 class="card-title">--}}
-                    {{--<a href="#">Nombre auto 2</a>--}}
-                  {{--</h4>--}}
-                  {{--<h5>$Precio 2</h5>--}}
-                  {{--<p class="card-text">Descripción</p>--}}
-                {{--</div>--}}
-                {{--<div class="card-footer">--}}
-                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
-                {{--</div>--}}
-              {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
-              {{--<div class="card">--}}
-                {{--<a href="http://127.0.0.1:8000/img/auto3.jpg"><img width="253" height="200" src="img/auto3.jpg" alt="Problema al cargar la foto"></a>--}}
-                {{--<div class="card-body">--}}
-                  {{--<h4 class="card-title">--}}
-                    {{--<a href="#">Nombre auto 3</a>--}}
-                  {{--</h4>--}}
-                  {{--<h5>$Precio 3</h5>--}}
-                  {{--<p class="card-text">Descripcion del tercer auto</p>--}}
-                {{--</div>--}}
-                {{--<div class="card-footer">--}}
-                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
-                {{--</div>--}}
-              {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
-              {{--<div class="card">--}}
-                {{--<a href="http://127.0.0.1:8000/img/auto4.jpg"><img class="card-img-top" src="img/auto4.jpg" alt=""></a>--}}
-                {{--<div class="card-body">--}}
-                  {{--<h4 class="card-title">--}}
-                    {{--<a href="#">Auto 4</a>--}}
-                  {{--</h4>--}}
-                  {{--<h5>$precio 4</h5>--}}
-                  {{--<p class="card-text">Descripcion 4</p>--}}
-                {{--</div>--}}
-                {{--<div class="card-footer">--}}
-                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
-                {{--</div>--}}
-              {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
-              {{--<div class="card">--}}
-                {{--<a href="http://127.0.0.1:8000/img/auto5.jpg"><img width="253" height="200" src="img/auto5.jpg" alt=""></a>--}}
-                {{--<div class="card-body">--}}
-                  {{--<h4 class="card-title">--}}
-                    {{--<a href="#">Auto 5</a>--}}
-                  {{--</h4>--}}
-                  {{--<h5>$Precio 5</h5>--}}
-                  {{--<p class="card-text">Descripcion 5</p>--}}
-                {{--</div>--}}
-                {{--<div class="card-footer">--}}
-                  {{--<progress value="70" max="100">70 %</progress>--}}
-                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
-                {{--</div>--}}
-              {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="col-lg-4 col-md-6 mb-4">--}}
-              {{--<div class="card">--}}
-                {{--<a onclick="alert('Click sobre la imagen del auto numero' + ' 6')"><img width="253" height="200" src="img/auto6.jpg" alt=""></a>--}}
-                {{--<div class="card-body">--}}
-                  {{--<h4 class="card-title">--}}
-                    {{--<a href="#">Auto 6</a>--}}
-                  {{--</h4>--}}
-                  {{--<h5>$Precio 6</h5>--}}
-                  {{--<p class="card-text">Decripcion 6</p>--}}
-                {{--</div>--}}
-                {{--<div class="card-footer">--}}
-                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
-                {{--</div>--}}
-              {{--</div>--}}
-            {{--</div>--}}
 
           </div>
           <!-- /.row -->
