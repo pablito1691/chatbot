@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/admin', function () {
     return view('admin')->with('marcas', Marca::all());
-});
+})->middleware('auth');
 
 Route::get('/vehiculo/{$id}', function ($id) {
 
@@ -40,3 +40,6 @@ Route::get('/pagina2', function () {
 Route::get('/prueba', function () {
     return view('codigosPrueba');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
