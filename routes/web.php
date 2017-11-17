@@ -61,7 +61,7 @@ Route::get('/vehiculos', function () {
 });
 
 Route::get('/pagina2', function () {
-    return view('pagina2');
+    return view('pagina2')->with('vehiculos',Vehiculo::all());
 });
 
 Route::get('/prueba', function () {

@@ -90,17 +90,25 @@
 
 
 
-
-              @foreach($vehiculos as $vehiculo)
-              @if($vehiculo->destacado ==1)
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <a href="/pagina2"> <img width="900" height="350" src="img/destacados1.jpg" alt="{{$vehiculo->version->modelo->descripcion}}"> </a>
-                </div>
-            </div>
+                @foreach($vehiculos as $vehiculo)
 
-          @endif
-            @endforeach
+
+              @if($vehiculo->destacado ==1)
+
+                <div class="carousel-item active">
+                   <img width="900" height="350" src="img/destacados1.jpg" alt="{{$vehiculo->version->modelo->descripcion}}">
+                </div>
+
+            @break;
+              @endif
+                @endforeach
+
+              <div class="carousel-item">
+                <img width="900" height="350" src="img/destacados2.jpg" alt="{{$vehiculo->version->modelo->descripcion}}">
+              </div>
+
+
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
@@ -110,7 +118,7 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-
+          </div>
           <div class="row">
 
 
@@ -123,7 +131,7 @@
                 <a href="http://127.0.0.1:8000/img/auto1.jpg"><img width="253" height="200" src="img/auto1.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
+                    <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
                   </h4>
                   <h5>${{$vehiculo->precio}}</h5>
                   <p class="card-text">{{$vehiculo->descripcion}}</p>
@@ -131,6 +139,9 @@
                 {{--<div class="card-footer">--}}
                   {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
                 {{--</div>--}}
+
+
+
               </div>
             </div>
             @endforeach
@@ -144,6 +155,8 @@
       </div>
       <!-- /.row -->
 
+      echo "<a href='/pagina2'>Pasando vehiculos a pagina 2</a>";
+      echo "HOLA";
     </div>
     <!-- /.container -->
 
@@ -155,10 +168,13 @@
       <!-- /.container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
+
+
+        <!-- Bootstrap core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
             integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
   </body>
+
 
 </html>
