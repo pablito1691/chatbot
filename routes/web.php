@@ -13,6 +13,7 @@
 
 use App\Color;
 use App\Marca;
+use App\Modelo;
 use App\Vehiculo;
 use Illuminate\Support\Facades\Input;
 
@@ -25,27 +26,27 @@ Route::get('/admin', function () {
         ->with('colores', Color::all());
 })->middleware('auth');
 
-Route::get('/getmarcas', function () {
 
-    $marcas = Marca::all();
-
-    $arrayMarcas = array();
-
-    foreach ($marcas as $marca) {
-        $arrayMarcas[] = array('id' => (string)$marca->idmarcas, 'value' => $marca->descripcion);
+Route::get('getmodelos', function(){
+    $id = Input::get('option');
+    $marca = Marca::where('idmarcas',$id)->first();
+    $modelos = $marca->modelos;
+    $array = array();
+    foreach ($modelos as $modelo) {
+        $array[$modelo->idmodelos] = $modelo->descripcion;
     }
-
-    $marcasJson = json_encode($arrayMarcas);
-
-    return $marcasJson;
+    return $array;
 });
 
-Route::get('getmarcas', function(){
+Route::get('getversiones', function(){
     $id = Input::get('option');
-    dd($id);
-    $modelos = Marca::where('idmarcas',$id)->first();
-    dd($modelos);
-    return $modelos->lists('descripcion', 'idmodelos');
+    $modelo = Modelo::where('idmodelos',$id)->first();
+    $versiones = $modelo->versiones;
+    $array = array();
+    foreach ($versiones as $version) {
+        $array[$version->idversiones] = $version->descripcion;
+    }
+    return $array;
 });
 
 Route::get('/vehiculo/{$id}', function ($id) {

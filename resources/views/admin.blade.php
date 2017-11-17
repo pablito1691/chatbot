@@ -37,7 +37,7 @@
                                         <label class="control-label">Seleccione la Marca</label>
                                         <select id="selectMarca" class="form-control">
                                             @foreach($marcas as $marca)
-                                                <option>{{$marca->descripcion}}</option>
+                                                <option value="{{$marca->idmarcas}}">{{$marca->descripcion}}</option>
                                             @endforeach
                                         </select>
                                     </div>
