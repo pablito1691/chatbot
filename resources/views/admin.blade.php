@@ -30,12 +30,13 @@
                 </div>
                 <div class="card-body">
                     <div class="col-lg-12">
-                        <form>
+                        <form action="vehiculos" method="post">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="control-label">Seleccione la Marca</label>
-                                        <select id="selectMarca" class="form-control">
+                                        <select name="marca" id="selectMarca" class="form-control">
+                                            <option>-----Seleccione la marca----</option>
                                             @foreach($marcas as $marca)
                                                 <option value="{{$marca->idmarcas}}">{{$marca->descripcion}}</option>
                                             @endforeach
@@ -45,7 +46,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="control-label">Seleccione el modelo</label>
-                                        <select id="selectModelo" class="form-control">
+                                        <select name="modelo" id="selectModelo" class="form-control">
                                             <option>---------</option>
                                         </select>
                                     </div>
@@ -53,7 +54,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="control-label">Seleccione la version</label>
-                                        <select id="selectVersion" class="form-control">
+                                        <select name="version" id="selectVersion" class="form-control">
                                             <option>---------</option>
                                         </select>
                                     </div>
@@ -61,43 +62,45 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="control-label">Descripcion</label>
-                                        <textarea class="form-control"></textarea>
+                                        <textarea name="descripcion" maxlength="150" class="form-control"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="control-label">Kilometros</label>
-                                        <input class="form-control">
+                                        <input name="kilometros" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="control-label">Precio</label>
-                                        <input class="form-control">
+                                        <input name="precio" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="control-label">Año</label>
-                                        <input class="form-control">
+                                        <input name="year" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="control-label">Color</label>
-                                        <select class="form-control">
+                                        <select name="color" class="form-control">
                                             @foreach($colores as $color)
-                                                <option>{{$color->descripcion}}</option>
+                                                <option value="{{$color->idcolores}}">{{$color->descripcion}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="control-label">Imagen</label>
-                                        <input type="file" class="form-control">
+                                        <label class="control-label">Imagen mini</label>
+                                        <input name="imagen" type="file" class="form-control">
                                     </div>
                                 </div>
+
+                                {{csrf_field()}}
                                 <button class="btn btn-primary btn-block">Agregar Vehiculo</button>
                             </div>
 

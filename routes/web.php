@@ -27,6 +27,9 @@ Route::get('/admin', function () {
 })->middleware('auth');
 
 
+Route::resource('vehiculos', 'VehiculosController');
+
+
 Route::get('getmodelos', function(){
     $id = Input::get('option');
     $marca = Marca::where('idmarcas',$id)->first();
@@ -54,10 +57,6 @@ Route::get('/vehiculo/{$id}', function ($id) {
     $vehiculo = Vehiculo::where('idvehiculos',$id);
 
     return view('vehiculo')->with('vehiculo', $vehiculo);
-});
-
-Route::get('/vehiculos', function () {
-    return view('vehiculos')->with('vehiculos', Vehiculo::all());
 });
 
 Route::get('/pagina2', function () {

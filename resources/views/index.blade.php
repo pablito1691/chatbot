@@ -128,7 +128,7 @@
 
             <div class="col-lg-4 col-md-6">
               <div class="card">
-                <a href="http://127.0.0.1:8000/img/auto1.jpg"><img width="253" height="200" src="img/auto1.jpg" alt=""></a>
+                <img width="253" height="200" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>

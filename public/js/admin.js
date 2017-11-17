@@ -7,6 +7,7 @@ $(document).ready(function(){
             { option: $(this).val()},
             function(data) {
                 $('#selectModelo').empty();
+                $('#selectModelo').append("<option>----Seleccione el modelo-----</option>");
                 $.each(data, function(key, element) {
                     $('#selectModelo').append("<option value='" + key + "'>" + element + "</option>");
                 });
@@ -19,6 +20,7 @@ $(document).ready(function(){
             { option: $(this).val()},
             function(data) {
                 $('#selectVersion').empty();
+                $('#selectVersion').append("<option>-----Seleccione la version----</option>");
                 $.each(data, function(key, element) {
                     $('#selectVersion').append("<option value='" + key + "'>" + element + "</option>");
                 });
