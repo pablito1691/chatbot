@@ -97,7 +97,7 @@
               @if($vehiculo->destacado ==1)
 
                 <div class="carousel-item active">
-                   <img width="900" height="350" src="img/destacados1.jpg" alt="{{$vehiculo->version->modelo->descripcion}}">
+                   <img width="900" height="350" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="{{$vehiculo->version->modelo->descripcion}}">
                 </div>
 
             @break;
