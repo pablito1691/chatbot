@@ -155,8 +155,6 @@
       </div>
       <!-- /.row -->
 
-      echo "<a href='/pagina2'>Pasando vehiculos a pagina 2</a>";
-      echo "HOLA";
     </div>
     <!-- /.container -->
 

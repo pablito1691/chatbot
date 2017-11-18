@@ -31,10 +31,11 @@ class VehiculosController extends Controller
                 $request_imagen = $request->file('imagen');
                 $nombreImagen = $request_imagen->hashName();
                 Storage::disk('public')->put('img', $request_imagen);
-                $vehiculo->imagen_mini = $nombreImagen;
+
             }
         }
 
+        $vehiculo->imagen_mini = $nombreImagen;
         $imagen->ruta = $nombreImagen;
 
 

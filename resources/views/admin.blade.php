@@ -30,7 +30,7 @@
                 </div>
                 <div class="card-body">
                     <div class="col-lg-12">
-                        <form action="vehiculos" method="post">
+                        <form action="vehiculos" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
