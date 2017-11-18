@@ -59,7 +59,6 @@ Route::get('getversiones', function(){
 
 Route::get('/vehiculo', function () {
 
-
     return view('vehiculo');
 });
 
