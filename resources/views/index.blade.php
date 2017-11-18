@@ -129,7 +129,7 @@
                 <img class="card-img-top" style="height: 300px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
                 <div class="card-block">
                   <h4 class="card-title">
-                    <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
+                    <a href="/vehiculo/{{$vehiculo->idvehiculos}}"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
                   </h4>
                   <h5>${{$vehiculo->precio}}</h5>
                   <h5>Año: {{$vehiculo->year}} - Km: {{$vehiculo->kilometros}}</h5>
