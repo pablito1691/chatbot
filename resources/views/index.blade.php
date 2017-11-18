@@ -94,20 +94,16 @@
 
                         @if($loop->index == 0)
 
-                            <div class="item active" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
-                                <div class="carousel-caption" style="margin-left: 30px">
-                                    <div class="row">
-                                        <div class="col-sm-7">
-                                            {{--<h1>{{$oferta->titulo}}</h1>--}}
-                                            {{--<h2>{{$oferta->subtitulo}}</h2>--}}
-                                            {{--<a href="{{$oferta->link}}" class="btn btn-send">{{$oferta->texto_boton}}</a>--}}
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="carousel-item active">
+                                <img class="img-responsive" style="height: 250px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
+                                     alt="{{$vehiculo->version->modelo->descripcion}}">
                             </div>
+
                         @else
 
-                            <div class="item" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
+                            <div class="carousel-item">
+                                <img class="img-responsive" style="height: 250px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
+                                     alt="{{$vehiculo->version->modelo->descripcion}}">
                             </div>
                         @endif
                     @endforeach
