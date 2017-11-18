@@ -91,7 +91,7 @@ foreach($vehiculos as $vehiculo){
 ?>
 
 <div class="col-sm-6 col-md-4 col-xs-12 no-padding img-hover">
-    <a href="https://www.leonalperovich.com.ar/vehiculos"><img src="img/zocalo_0km.jpg" class="img-responsive"></a>
+    <a href="https://www.leonalperovich.com.ar/vehiculos"><img src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" class="img-responsive"></a>
 </div>
 
 
