@@ -128,7 +128,7 @@
 
             <div class="col-lg-4 col-md-6">
               <div class="card">
-                <img class="card-img-top" style="max-height: 200px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
+                <img class="card-img-top" style="max-height: 300px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
                 <div class="card-block">
                   <h4 class="card-title">
                     <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
@@ -136,6 +136,7 @@
                   <h5>${{$vehiculo->precio}}</h5>
                   <h5>Año: {{$vehiculo->year}} - Km: {{$vehiculo->kilometros}}</h5>
                   <p class="card-text">{{$vehiculo->descripcion}}</p>
+                  <a href="#" class="btn btn-primary btn-block">Consulta!</a>
                 </div>
                 {{--<div class="card-footer">--}}
                   {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
