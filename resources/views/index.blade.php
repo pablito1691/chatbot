@@ -94,16 +94,12 @@
 
                         @if($loop->index == 0)
 
-                            <div class="carousel-item active">
-                                <img width="900" height="350" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
-                                     alt="{{$vehiculo->version->modelo->descripcion}}">
+                            <div class="carousel-item active" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
                             </div>
 
                         @else
 
-                            <div class="carousel-item">
-                                <img width="900" height="350" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
-                                     alt="{{$vehiculo->version->modelo->descripcion}}">
+                            <div class="carousel-item active" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
                             </div>
                         @endif
                     @endforeach
