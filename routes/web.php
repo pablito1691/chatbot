@@ -18,7 +18,9 @@ use App\Vehiculo;
 use Illuminate\Support\Facades\Input;
 
 Route::get('/', function () {
-    return view('index')->with('vehiculos',Vehiculo::all());
+    return view('index')
+        ->with('vehiculos',Vehiculo::all())
+        ->with('vehiculos_destacados', Vehiculo::where('destacado', 1));
 });
 
 Route::get('/admin', function () {
