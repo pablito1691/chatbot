@@ -57,6 +57,12 @@ Route::get('getversiones', function(){
     return $array;
 });
 
+Route::get('/vehiculo', function () {
+
+
+    return view('vehiculo');
+});
+
 Route::get('/vehiculo/{$id}', function ($id) {
 
     $vehiculo = Vehiculo::where('idvehiculos',$id);
