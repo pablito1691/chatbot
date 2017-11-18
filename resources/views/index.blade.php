@@ -66,7 +66,7 @@
            }-->
            <h3 class="my-4">Seleccione lo que esta buscando</h3>
            <div class="list-group">
-             <a href="#" class="list-group-item">Usados</a>
+             <a href="/pagina2" class="list-group-item">Usados</a>
              <a href="#" class="list-group-item">0 KM </a>
              <a href="#" class="list-group-item"> Vendidos</a>
            </div>
@@ -94,16 +94,12 @@
 
                         @if($loop->index == 0)
 
-                            <div class="carousel-item active">
-                                <img class="img-responsive" style="height: 250px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
-                                     alt="{{$vehiculo->version->modelo->descripcion}}">
+                            <div class="item active" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
                             </div>
 
                         @else
 
-                            <div class="carousel-item">
-                                <img class="img-responsive" style="height: 250px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
-                                     alt="{{$vehiculo->version->modelo->descripcion}}">
+                            <div class="item" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
                             </div>
                         @endif
                     @endforeach
@@ -133,7 +129,7 @@
                 <img class="card-img-top" style="height: 300px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
                 <div class="card-block">
                   <h4 class="card-title">
-                    <a href="/vehiculo/{{$vehiculo->idvehiculos}}"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
+                    <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
                   </h4>
                   <h5>${{$vehiculo->precio}}</h5>
                   <h5>Año: {{$vehiculo->year}} - Km: {{$vehiculo->kilometros}}</h5>
