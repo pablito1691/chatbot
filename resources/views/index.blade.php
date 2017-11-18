@@ -128,7 +128,9 @@
 
             <div class="col-lg-4 col-md-6">
               <div class="card">
-                <img width="253" height="200" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
+                <div class="card-img-top">
+                  <img class="img-responsive" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
+                </div>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
