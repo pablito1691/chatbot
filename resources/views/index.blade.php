@@ -66,7 +66,7 @@
            }-->
            <h3 class="my-4">Seleccione lo que esta buscando</h3>
            <div class="list-group">
-             <a href="/pagina2" class="list-group-item">Usados</a>
+             <a href="pagina2" class="list-group-item">Usados</a>
              <a href="#" class="list-group-item">0 KM </a>
              <a href="#" class="list-group-item"> Vendidos</a>
            </div>
