@@ -78,7 +78,7 @@
 
             <div class="card">
                 <div class="card-header"><h1>{{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</h1></div>
-                <img class="card-img-top" style="height: 300px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
+                <img class="card-img-top" style="height: 400px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
                 <div class="card-block">
                     <h4 class="card-title">
                         <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
