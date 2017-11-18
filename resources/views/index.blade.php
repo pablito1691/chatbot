@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>AgUsados</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
@@ -29,7 +29,7 @@
         <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Bienvenido</a>
+        <a class="navbar-brand" href="#">AgUsados</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,7 +55,7 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid" style="background-color: #f7f7f7">
 
       <div class="row">
 
@@ -64,7 +64,7 @@
            {
            // operar con la variable;
            }-->
-           <h1 class="my-4">AG USADOS</h1>
+           <h3 class="my-4">Seleccione lo que esta buscando</h3>
            <div class="list-group">
              <a href="#" class="list-group-item">Usados</a>
              <a href="#" class="list-group-item">0 KM </a>
@@ -134,6 +134,7 @@
                     <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
                   </h4>
                   <h5>${{$vehiculo->precio}}</h5>
+                  <h5>Año: {{$vehiculo->year}} - Km: {{$vehiculo->kilometros}}</h5>
                   <p class="card-text">{{$vehiculo->descripcion}}</p>
                 </div>
                 {{--<div class="card-footer">--}}
