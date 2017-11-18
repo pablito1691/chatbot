@@ -94,12 +94,12 @@
 
                         @if($loop->index == 0)
 
-                            <div class="carousel-item active" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
+                            <div class="item active" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
                             </div>
 
                         @else
 
-                            <div class="carousel-item active" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
+                            <div class="item" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
                             </div>
                         @endif
                     @endforeach
