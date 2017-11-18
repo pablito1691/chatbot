@@ -77,7 +77,7 @@
         <div class="col-lg-9">
 
             <div class="card">
-                <div class="card-header"><h1>{{$vehiculo->version->modelo->descripcion}}{{$vehiculo->version->descripcion}}</h1></div>
+                <div class="card-header"><h1>{{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</h1></div>
                 <div class="card-block">
                     <h4 class="card-title">
                         <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>

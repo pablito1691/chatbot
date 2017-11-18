@@ -64,7 +64,7 @@ Route::get('/vehiculo', function () {
 
 Route::get('/vehiculo/{id}', function ($id) {
 
-    $vehiculo = Vehiculo::where('idvehiculos',$id);
+    $vehiculo = Vehiculo::where('idvehiculos',$id)->first();
 
     return view('vehiculo')->with('vehiculo', $vehiculo);
 });
