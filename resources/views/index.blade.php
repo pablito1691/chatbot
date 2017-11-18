@@ -128,7 +128,7 @@
 
             <div class="col-lg-4 col-md-6">
               <div class="card">
-                <img class="card-img-top" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
+                <img class="card-img-top" style="max-height: 200px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
                 <div class="card-block">
                   <h4 class="card-title">
                     <a href="/pagina2"> {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
