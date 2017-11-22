@@ -85,18 +85,18 @@ Route::get('getversiones', function(){
 
 Route::get('/vehiculo', function () {
 
-    return view('vehiculo');
+    return view('vehiculo')->with('vehiculos', Vehiculo::all());
 });
 
 Route::get('/vehiculo/{id}', function ($id) {
 
     $vehiculo = Vehiculo::where('idvehiculos',$id)->first();
 
-    return view('vehiculo')->with('vehiculo', $vehiculo);
+    return view('vehiculoDetalle')->with('vehiculo', $vehiculo);
 });
 
-Route::get('/pagina2', function () {
-    return view('pagina2')->with('vehiculos',Vehiculo::all());
+Route::get('/vehiculoDetalle', function () {
+    return view('vehiculoDetalle')->with('vehiculos',Vehiculo::all());
 });
 
 Route::get('/prueba', function () {
@@ -105,3 +105,4 @@ Route::get('/prueba', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

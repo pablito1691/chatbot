@@ -1,99 +1,122 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 
-    <title> Pagina 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-item.css" rel="stylesheet">
 
 </head>
 
-<script type="text/javascript">
-    function redireccionar() {
-        window.locationf = "http://www.cristalab.com";
-    }
-    function ConfirmDemo() {
-
-        var mensaje = confirm("¿Te gusta Desarrollo Geek?");
-
-        if (mensaje) {
-            alert("¡Gracias por aceptar!");
-            redireccionar();
-        }
-
-        else {
-            alert("¡Haz denegado el mensaje!");
-        }
-    }
-</script>
-
-
 <body>
 
-<input type="button" onclick="ConfirmDemo()" value="Click para ver un mensaje de confirmación" />
-
-<div class="card">
-    <div class = "card-title">
-    HOLA
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <img src="img/auto2.jpg" alt="">
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-3">
+            <h1 class="my-4">Shop Name</h1>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">Category 1</a>
+                <a href="#" class="list-group-item">Category 2</a>
+                <a href="#" class="list-group-item">Category 3</a>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+            <div class="card mt-4">
+                <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Product Name</h3>
+                    <h4>$24.99</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                    4.0 stars
+                </div>
+            </div>
+            <!-- /.card -->
+
+            <div class="card card-outline-secondary my-4">
+                <div class="card-header">
+                    Product Reviews
+                </div>
+                <div class="card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                    <a href="#" class="btn btn-success">Leave a Review</a>
+                </div>
+            </div>
+            <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+
 </div>
+<!-- /.container -->
 
-@foreach($vehiculos as $vehiculo)
-@if ($vehiculo === reset($vehiculos))
-echo "reset($vehiculos)";
-@endif
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+    </div>
+    <!-- /.container -->
+</footer>
 
-@endforeach
-
-@foreach($vehiculos as $vehiculo)
-    @if($loop->index == 0)
-echo "Este es la version del primer vehiculo del array" - {{$vehiculo->version->descripcion}};
-
-echo <br/> <br/> {{$vehiculo->descripcion}}
-echo <br/> <br/> "ID DEL COLOR: " {{$vehiculo->color->idcolores}}
-     <br/> <br/> "NOMBRE COLOR: " {{$vehiculo->color->descripcion}}
-    @endif
-
-@endforeach
-<?php
-
-
-$cantidad = count($vehiculos);
-echo $cantidad."aqui";
-
-
-
-foreach ($vehiculos as $vehiculo){
-    if($vehiculo->destacado == 1){
-    echo "ESTE VEHICULO ESTA DESTACADO";
-    break;
-    }
-}
-
-?>
-
-@foreach($vehiculos as $vehiculo)
-    @if($loop->index == $cantidad)
-        echo "Este es la version del Ultimo vehiculo del array" - {{$vehiculo->version->descripcion}};
-
-        echo <br/> <br/> {{$vehiculo->descripcion}}
-        echo <br/> <br/> "ID DEL COLOR: " {{$vehiculo->color->idcolores}}
-        <br/> <br/> "NOMBRE COLOR: " {{$vehiculo->color->descripcion}}
-    @endif
-
-@endforeach
-<?php
-foreach($vehiculos as $vehiculo){
-    if($vehiculo->destacado==1){
-
-        echo "<br/>Aca hay un destacado y es el numero"."-".current($vehiculo)."- del arreglo <br/>";
-    }
-}
-?>
-
-<div class="col-sm-6 col-md-4 col-xs-12 no-padding img-hover">
-    <a href="https://www.leonalperovich.com.ar/vehiculos"><img src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" class="img-responsive"></a>
-</div>
-
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
