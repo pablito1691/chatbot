@@ -21,11 +21,12 @@ Route::get('/', function () {
 
     $vehiculosDestacados = Vehiculo::where('destacado', 1)->get();
 
-    $vehiculos = Vehiculo::paginate(3);
+    $vehiculos = Vehiculo::paginate(12);
 
     return view('index')
         ->with('vehiculos', $vehiculos)
-        ->with('vehiculos_destacados', $vehiculosDestacados);
+        ->with('vehiculos_destacados', $vehiculosDestacados)
+        ->with('marcas', Marca::all());
 });
 
 Route::get('/admin', function () {
@@ -35,6 +36,27 @@ Route::get('/admin', function () {
 
 
 Route::resource('vehiculos', 'VehiculosController');
+
+Route::get('{marca}/vehiculos', function ($marca) {
+    $vehiculos = array();
+
+    $marca = Marca::where('idmarcas', $marca)->first();
+    $modelos = $marca->modelos;
+    foreach ($modelos as $modelo) {
+        foreach ($modelo->versiones as $version) {
+            foreach ($version->vehiculos as $vehiculo) {
+                array_push($vehiculos, $vehiculo);
+            }
+        }
+    }
+
+    $vehiculosDestacados = Vehiculo::where('destacado', 1)->get();
+
+    return view('index')
+        ->with('vehiculos', $vehiculos)
+        ->with('vehiculos_destacados', $vehiculosDestacados)
+        ->with('marcas', Marca::all());
+});
 
 
 Route::get('getmodelos', function(){

@@ -64,11 +64,11 @@
            {
            // operar con la variable;
            }-->
-           <h3 class="my-4">Seleccione lo que esta buscando</h3>
+           <h3 class="my-4">Marcas</h3>
            <div class="list-group">
-             <a href="/pagina2" class="list-group-item">Usados</a>
-             <a href="#" class="list-group-item">0 KM </a>
-             <a href="#" class="list-group-item"> Vendidos</a>
+               @foreach($marcas as $marca)
+                   <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}}</a>
+               @endforeach
            </div>
 
          </div>
@@ -150,7 +150,7 @@
 
           </div>
           <!-- /.row -->
-            {{$vehiculos->links()}}
+            {{--{{$vehiculos->links()}}--}}
 
         </div>
         <!-- /.col-lg-9 -->
