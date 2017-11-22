@@ -65,9 +65,7 @@
     </div>
     <script>
        function hacerClick(){
-
-
-            document.getElementsByName("imagen_m").click();
+            document.getElementById("imagen_m").click();
 
 
        }
