@@ -86,7 +86,7 @@
                     <h5>${{$vehiculo->precio}}</h5>
                     <h5>Año: {{$vehiculo->year}} - Km: {{$vehiculo->kilometros}}</h5>
                     <p class="card-text">{{$vehiculo->descripcion}}</p>
-                    <a href="#" class="btn btn-primary btn-block">Consulta!</a>
+                    <a href="#" class="btn btn-primary">Consulta!</a>
                 </div>
 
 

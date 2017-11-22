@@ -146,8 +146,11 @@
             </div>
             @endforeach
 
+
+
           </div>
           <!-- /.row -->
+            {{$vehiculos->links()}}
 
         </div>
         <!-- /.col-lg-9 -->

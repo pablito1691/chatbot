@@ -21,8 +21,10 @@ Route::get('/', function () {
 
     $vehiculosDestacados = Vehiculo::where('destacado', 1)->get();
 
+    $vehiculos = Vehiculo::paginate(3);
+
     return view('index')
-        ->with('vehiculos',Vehiculo::all())
+        ->with('vehiculos', $vehiculos)
         ->with('vehiculos_destacados', $vehiculosDestacados);
 });
 
