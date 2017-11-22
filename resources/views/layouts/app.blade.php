@@ -74,8 +74,7 @@
 <script>
     $(document).ready(function () {
         $('.imagen_mini').on('click', function () {
-            console.log(this.src);
-            $('#imagen').src = this.src;
+            $('#imagen').attr('src',this.src);
         });
     });
 
