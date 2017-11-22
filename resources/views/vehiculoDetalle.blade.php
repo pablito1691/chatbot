@@ -8,19 +8,19 @@
             <div class="col-lg-3">
                 <h1 class="my-4">Fotos</h1>
 
-                @foreach($vehiculos as $vehiculo)
+
                     <div class="list-group">
                         <img width="150" height="150" src="" alt="No se pudo cargar la imagen">
                     </div>
 
-                @endforeach
+
             </div>
             <!-- /.col-lg-3 -->
 
             <div class="col-lg-9">
 
                 <div class="card mt-4">
-                    <img width="900" height="400" class="card-img-top img-fluid" src="img/auto1.jpg"
+                    <img width="900" height="400" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
                          alt="No se pudo cargar la imagen">
                     <div class="card-body">
                         <h3 class="card-title">{{$vehiculo->version->descripcion}}</h3>
