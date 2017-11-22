@@ -25,7 +25,7 @@
 
     <style>
         .img-mini {
-            object-fit: none; /* Do not scale the image */
+            /*object-fit: none; !* Do not scale the image *!*/
             object-position: center; /* Center the image within the element */
             width: 100%;
             max-height: 250px;
