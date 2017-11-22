@@ -10,16 +10,18 @@
 
                 @foreach($vehiculo->imagenes as $imagenes)
                     <div class="list-group">
-                        <a href=""><img id="imagen" onmouseover="hacerClick()" onclick="alert('Hiciste click')" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
+                        <a href=""><img id="imagen_mini" onmouseover="hacerClick()" onclick="cambiarImagen()" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
                                                                  alt="No se pudo cargar la imagen"></a>
                         <p></p>
                     </div>
                  @endforeach
                 <script>
                     function hacerClick() {
-                        document.getElementById("imagen").click();
+                        document.getElementById("imagen_mini").click();
                     }
                     function cambiarImagen() {
+                        $src2 = this.src;
+                        document.getElementById("imagen").src = $src2;
 
                     }
                 </script>
@@ -30,13 +32,12 @@
             <div class="col-lg-9">
 
                 <div class="card mt-4">
-                    <img width="900" height="400" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
+                    <img width="900" height="400" id="imagen" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
                          alt="No se pudo cargar la imagen">
                     <div class="card-body">
                         <h3 class="card-title">{{$vehiculo->version->descripcion}}</h3>
                         <h4>{{$vehiculo->precio}}</h4>
                         <p class="card-text">{{$vehiculo->descripcion}}</p>
-
                     </div>
                 </div>
                 <!-- /.card -->
