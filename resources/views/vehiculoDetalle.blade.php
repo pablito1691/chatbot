@@ -20,7 +20,7 @@
                         document.getElementById("imagen_mini").click();
                     }
                     function cambiarImagen() {
-                        $src2 = this.src;
+                        $src2 = document.getElementById("imagen_mini").src;
                         console.log($src2);
                         document.getElementById("imagen").src = $src2;
 
