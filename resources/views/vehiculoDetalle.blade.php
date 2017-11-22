@@ -17,12 +17,7 @@
                  @endforeach
                 <script>
                     function cambiarImagen(imagen) {
-                        console.log(imagen.src);
-                        $src2 = document.getElementsByClassName("imagen_mini").src;
-                        console.log($src2);
-                        document.getElementById("imagen").src = $src2;
-                        console.log(document.getElementById("imagen").src );
-
+                        document.getElementById("imagen").src = imagen.src;
                     }
                 </script>
 
