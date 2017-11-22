@@ -10,8 +10,8 @@
 
                 @foreach($vehiculo->imagenes as $imagenes)
                     <div class="list-group">
-                        <a href="javascript:cambiarImagen(this)"><img class="imagen_mini"  width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
-                                                                 alt="No se pudo cargar la imagen"></a>
+                        <img class="imagen_mini"  width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
+                                                                 alt="No se pudo cargar la imagen">
                         <p></p>
                     </div>
                  @endforeach
