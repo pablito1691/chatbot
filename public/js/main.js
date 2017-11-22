@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.imagen_mini').on('hover', function (e) {
+    $('.imagen_mini').on('mouseover', function (e) {
         e.preventDefault();
         $('#imagen').attr('src',this.src);
     });
