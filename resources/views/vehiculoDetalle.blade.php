@@ -10,7 +10,7 @@
 
                 @foreach($vehiculo->imagenes as $imagenes)
                     <div class="list-group">
-                        <a href=""><img width="200" height="200" src="{{asset('storage/img/'.$imagenes->ruta)}}" alt=""></a>
+                        <a href=""><img width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}" alt=""></a>
                         <p></p>
                     </div>
                  @endforeach
