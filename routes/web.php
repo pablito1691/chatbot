@@ -56,7 +56,8 @@ Route::get('{marca}/vehiculos', function ($marca) {
     return view('index')
         ->with('vehiculos', $vehiculos)
         ->with('vehiculos_destacados', $vehiculosDestacados)
-        ->with('marcas', Marca::all());
+        ->with('marcas', Marca::all())
+        ->with('modelos', $modelos);
 });
 
 
