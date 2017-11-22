@@ -16,6 +16,11 @@
                     </div>
                  @endforeach
                 </div>
+            <script>
+                function hacerClick(){
+                    document.getElementById("imagen_m").click();
+                }
+            </script>
 
             <!-- /.col-lg-3 -->
 
@@ -63,13 +68,7 @@
         </div>
 
     </div>
-    <script>
-       function hacerClick(){
-            document.getElementById("imagen_m").click();
 
-
-       }
-    </script>
 
 
 
