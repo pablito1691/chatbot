@@ -19,10 +19,7 @@
 //                    function cambiarImagen(img) {
 //                        document.getElementById("imagen").src = img.src;
 //                                            }
-                    $('.imagen_mini').on('click', function () {
-                        console.log(this.src);
-                        $('#imagen').src = this.src;
-                    });
+
                 </script>
 
             </div>
