@@ -16,8 +16,8 @@
                     </div>
                  @endforeach
                 <script>
-                    function cambiarImagen(imagen) {
-                        document.getElementById("imagen").src = imagen.src;
+                    function cambiarImagen(img) {
+                        document.getElementById("imagen").src = img.src;
                     }
                 </script>
 
@@ -27,7 +27,7 @@
             <div class="col-lg-9">
 
                 <div class="card mt-4">
-                    <img width="900" height="400" id="imagen" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
+                    <img width="900" height="400" id="imagen" class="card-img-top img-fluid" src=""
                          alt="No se pudo cargar la imagen">
                     <div class="card-body">
                         <h3 class="card-title">{{$vehiculo->version->descripcion}}</h3>
