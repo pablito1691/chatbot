@@ -15,12 +15,6 @@
                         <p></p>
                     </div>
                  @endforeach
-                <script>
-//                    function cambiarImagen(img) {
-//                        document.getElementById("imagen").src = img.src;
-//                                            }
-
-                </script>
 
             </div>
             <!-- /.col-lg-3 -->
@@ -69,5 +63,7 @@
         </div>
 
     </div>
+
+
 
 @endsection
