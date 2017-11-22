@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
 
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -74,7 +72,8 @@
 
 <script>
     $(document).ready(function () {
-        $('.imagen_mini').on('click', function () {
+        $('.imagen_mini').on('click', function (e) {
+            e.preventDefault();
             $('#imagen').attr('src',this.src);
         });
     });
