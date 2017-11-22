@@ -134,7 +134,7 @@
             @foreach($vehiculos as $vehiculo)
 
             <div class="col-lg-4 col-md-6">
-              <div class="card">
+              <div class="card card-hover" style="margin-bottom: 20px">
                 <img class="card-img-top" style="height: 300px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
                 <div class="card-block">
                   <h4 class="card-title">
@@ -172,6 +172,37 @@
 
     </div>
     <!-- /.container -->
+
+    <style>
+
+        .card-hover card
+        {
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+        }
+        .card-hover:hover {
+            box-shadow: 0px 0px 150px #000000;
+            z-index: 1.5;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1.05);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1.05);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1.05);
+            transition: all 200ms ease-in;
+        }
+        .grayscale {
+            -webkit-filter: brightness(1.10) grayscale(100%) contrast(90%);
+            -moz-filter: brightness(1.10) grayscale(100%) contrast(90%);
+            filter: brightness(1.10) grayscale(100%);
+        }
+    </style>
 
 @endsection
 
