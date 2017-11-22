@@ -74,7 +74,7 @@
             <h3 class="my-4">Modelos</h3>
            <div class="list-group">
                @foreach($modelos as $modelo)
-                   <a href="/{{$modelo->idmarcas}}/vehiculos" class="list-group-item">{{$modelo->descripcion}}</a>
+                   <a href="/{{$modelo->idmodelos}}/{{$modelo->marca->idmarcas}}/vehiculos" class="list-group-item">{{$modelo->descripcion}}</a>
                @endforeach
            </div>
 
