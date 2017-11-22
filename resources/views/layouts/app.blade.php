@@ -33,7 +33,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">
-        <img class="img-responsive" src="img/logo.png">
+        <img class="img-responsive" src="{{url('img/logo.png')}}">
     </a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
