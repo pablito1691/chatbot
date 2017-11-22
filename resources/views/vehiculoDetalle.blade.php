@@ -21,6 +21,7 @@
                     }
                     function cambiarImagen() {
                         $src2 = this.src;
+                        console.log($src2);
                         document.getElementById("imagen").src = $src2;
 
                     }
