@@ -2,6 +2,57 @@
 
 @section('content')
 
+    <div id="modalConsulta" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Header</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <img class="img-responsive" src="" id="imgPopup" style="max-width: 450px">
+
+                                <form id="consultaForm" action="{{url('admin/consultas')}}" method="POST" enctype="multipart/form-data">
+                                    <div class="form-group" id="formNombre">
+                                        <input class="form-control" type="text" name="nombre" id="inputNombre" placeholder="Nombre*">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group" id="formEmail">
+                                            <input class="form-control" type="email" name="email" id="inputEmail" placeholder="Email*">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group" id="formTelefono">
+                                            <input class="form-control" type="text" name="telefono" id="inputTelefono" placeholder="Telefono*">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="formMensaje">
+                                        <textarea name="mensaje" id="textMensaje" class="form-control"
+                                                  maxlength="499"rows="4" placeholder="Mensaje*"></textarea>
+                                    </div>
+
+                                    <input type="hidden" id="hiddenVehiculo" name="vehiculo">
+
+                                    {{ csrf_field() }}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="confirmConsulta" class="btn btn-primary btn-block" data-dismiss="modal">Enviar Consulta</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <!-- Page Content -->
     <div class="container-fluid" style="background-color: #f7f7f7">
 
@@ -89,7 +140,10 @@
                   <h5>${{$vehiculo->precio}}</h5>
                   <h5>Año: {{$vehiculo->year}} - Km: {{$vehiculo->kilometros}}</h5>
                   <p class="card-text">{{$vehiculo->descripcion}}</p>
-                  <a href="#" class="btn btn-primary btn-block">Consulta!</a>
+                  <a href="#" data-toggle="modal" data-target="#modalConsulta"
+                     data-modelo="{{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}"
+                     data-imagen="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
+                     class="btn btn-primary btn-block">Consulta!</a>
                 </div>
                 {{--<div class="card-footer">--}}
                   {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
