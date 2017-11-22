@@ -10,15 +10,12 @@
 
                 @foreach($vehiculo->imagenes as $imagenes)
                     <div class="list-group">
-                        <a href=""><img id="imagen_mini" onmouseover="hacerClick()" onclick="cambiarImagen()" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
+                        <a href=""><img id="imagen_mini" onclick="cambiarImagen()" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
                                                                  alt="No se pudo cargar la imagen"></a>
                         <p></p>
                     </div>
                  @endforeach
                 <script>
-                    function hacerClick() {
-                        document.getElementById("imagen_mini").click();
-                    }
                     function cambiarImagen() {
                         $src2 = document.getElementById("imagen_mini").src;
                         console.log($src2);
