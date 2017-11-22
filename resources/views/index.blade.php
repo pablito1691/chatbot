@@ -64,9 +64,12 @@
            // operar con la variable;
            }-->
            <h3 class="my-4">Marcas</h3>
+
+
            <div class="list-group">
                @foreach($marcas as $marca)
                    <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{count($marca->modelos)}})</a>
+
                @endforeach
            </div>
 
