@@ -1,8 +1,9 @@
 $(document).ready(function () {
-    $('.imagen_mini').on('click', function (e) {
+    $('.imagen_mini').on('hover', function (e) {
         e.preventDefault();
         $('#imagen').attr('src',this.src);
     });
+
 
     $('#modalConsulta').on('show.bs.modal', function (e) {
 
@@ -25,14 +26,14 @@ $(document).ready(function () {
 
     });
 
-    $('.imagen_mini').mouseover(function (e){
-        e.preventDefault();
-        $('.imagen_mini').on('click', function (e) {
-            e.preventDefault();
-            $('#imagen').attr('src',this.src);
-        });
+    // $('.imagen_mini').mouseover(function (e){
+    //     e.preventDefault();
+    //     $('.imagen_mini').on('hover', function (e) {
+    //         e.preventDefault();
+    //         $('#imagen').attr('src',this.src);
+    //     });
 
-    });
+    // });
 
 
 });

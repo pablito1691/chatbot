@@ -16,11 +16,7 @@
                     </div>
                  @endforeach
                 </div>
-            <script>
-                function hacerClick(){
-                    document.getElementsByClassName("imagen_mini").click();
-                }
-            </script>
+
 
             <!-- /.col-lg-3 -->
 
