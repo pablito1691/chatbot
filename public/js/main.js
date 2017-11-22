@@ -24,6 +24,7 @@ $(document).ready(function () {
 
 
     });
+
     $('.imagen_mini').mouseover(function (e){
         e.preventDefault();
         $('.imagen_mini').on('click', function (e) {
