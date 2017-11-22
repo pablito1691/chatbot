@@ -23,6 +23,7 @@
                         $src2 = document.getElementById("imagen_mini").src;
                         console.log($src2);
                         document.getElementById("imagen").src = $src2;
+                        console.log(document.getElementById("imagen").src );
 
                     }
                 </script>
