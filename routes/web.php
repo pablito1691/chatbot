@@ -26,7 +26,8 @@ Route::get('/', function () {
     return view('index')
         ->with('vehiculos', $vehiculos)
         ->with('vehiculos_destacados', $vehiculosDestacados)
-        ->with('marcas', Marca::all());
+        ->with('marcas', Marca::all())
+        ->with('modelos', Modelo::all());
 });
 
 Route::get('/admin', function () {
