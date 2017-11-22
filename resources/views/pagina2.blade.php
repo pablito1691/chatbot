@@ -18,7 +18,7 @@ JavaScript
 <body>
 <!-- Copiar dentro del tag BODY -->
 <!-- imagen.jpg es el nombre del archivo, 121 es el ancho de la imagen y 168 el alto -->
-<a href="javascript:CargarFoto('ejemplos/bisco.gif','121','168')">Abrir imagen</a>
+<a href="javascript:CargarFoto('img/auto1.jpg','121','168')">Abrir imagen</a>
 </body>
 </html>
 1
