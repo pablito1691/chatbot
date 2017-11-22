@@ -8,10 +8,11 @@
             <div class="col-lg-3">
                 <h1 class="my-4">Fotos</h1>
 
-
+                @foreach($vehiculo->imagenes as $imagenes)
                     <div class="list-group">
-                        <img width="150" height="150" src="" alt="No se pudo cargar la imagen">
+                        <img width="150" height="150" src="" alt="{{asset('storage/img/'.$imagenes->ruta)}}">
                     </div>
+                 @endforeach
 
 
             </div>
