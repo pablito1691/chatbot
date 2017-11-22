@@ -35,6 +35,10 @@ Route::get('/admin', function () {
         ->with('colores', Color::all());
 })->middleware('auth');
 
+Route::get('/pagina2', function(){
+    return view('pagina2');
+});
+
 
 Route::resource('vehiculos', 'VehiculosController');
 
