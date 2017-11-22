@@ -187,14 +187,14 @@
             transform: scale(1);
         }
         .card-hover:hover {
-            box-shadow: 0px 0px 150px #000000;
+            box-shadow: 0px 0px 100px #000000;
             z-index: 1.5;
             -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(1.05);
+            -webkit-transform: scale(1.03);
             -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(1.05);
+            -ms-transform: scale(1.03);
             -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(1.05);
+            -moz-transform: scale(1.03);
             transition: all 200ms ease-in;
         }
         .grayscale {
