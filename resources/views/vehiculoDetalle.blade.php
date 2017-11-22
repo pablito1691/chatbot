@@ -17,6 +17,7 @@
                  @endforeach
                 <script>
                     function cambiarImagen() {
+                        console.log(this.src);
                         $src2 = document.getElementsByClassName("imagen_mini").src;
                         console.log($src2);
                         document.getElementById("imagen").src = $src2;
