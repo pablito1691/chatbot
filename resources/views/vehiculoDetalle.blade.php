@@ -64,7 +64,7 @@
         </div>
 
         <p> </p>
-        <a href="/pagina2" target="_blank" onclick="window.open(this.href,this.target,'width=400,height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;">Ejemplo</a>
+        <a href="/pagina2" target="_parent" onclick="window.open(this.href,this.target,'width=400,height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;">Ejemplo</a>
 
     </div>
 @endsection
