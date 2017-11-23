@@ -33,8 +33,8 @@
                     {{--<a href="#"><img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"--}}
                                      {{--alt="No se pudo cargar la imagen"></a>--}}
                     <a href='img/bigimage03.jpg' class='cloud-zoom-gallery' title='Thumbnail 1'
-                       rel="useZoom: 'zoom3', smallImage: 'img/smallimage-3.jpg' ">
-                        <img src="img/tinyimage-3.jpg" alt = "Thumbnail 1"/></a>
+                       rel="useZoom: 'zoom3', smallImage: '{{asset('storage/img/'.$imagenes->ruta)}}' ">
+                        <img src="{{asset('storage/img/'.$imagenes->ruta)}}" alt = "Thumbnail 1"/></a>
                     <p></p>
                 </div>
             @endforeach
