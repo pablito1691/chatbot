@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app')
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-</head>
-
-<body>
-
-<nav class="navbar">
-    PANEL DE ADMINISTRACION
-</nav>
+@section('content')
 
 <div class="container">
 
@@ -113,14 +102,4 @@
 
 </div>
 
-<script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-
-<script src="http://carlosdeoliveira.net/jcombo/jquery.jCombo.min.js"></script>
-<script src="js/admin.js"></script>
-
-</body>
-
-</html>
+    @endsection

@@ -59,7 +59,7 @@
 
       <div class="row">
 
-        <div class="col-lg-3">
+        <div class="col-lg-2">
 
             <div id="filtrosList">
 
@@ -100,7 +100,7 @@
          </div>
          <!-- /.col-lg-3 -->
 
-        <div class="col-lg-9">
+        <div class="col-lg-10">
           <!-- foreach($conjunto as $variable)
            {
            // operar con la variable;
