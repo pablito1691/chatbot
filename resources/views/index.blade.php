@@ -90,7 +90,7 @@
                    @foreach($modelo->versiones as $version)
                        @php($count = $count + count($version->vehiculos))
                    @endforeach
-                   <a href="/{{$modelo->idmodelos}}/{{$modelo->marca->idmarcas}}/vehiculos" class="list-group-item">{{$modelo->descripcion}} ({{$count}})</a>
+                   <a href="/{{$modelo->marca->idmarcas}}/{{$modelo->idmodelos}}/vehiculos" class="list-group-item">{{$modelo->descripcion}} ({{$count}})</a>
                    @if(count($modelos) == 1)
                        <a href="{{url('/'.$modelo->marca->idmarcas.'/vehiculos')}}"><div class="btn btn-primary">X</div></a>
                    @endif
