@@ -28,4 +28,34 @@ $(document).ready(function(){
                 });
             });
     });
+
+    $('#selectMarcaABM').change(function(){
+        $('#inputModeloABM').removeAttr('disabled');
+        $.get(
+            { url: '/getmodelos'},
+            { option: $(this).val()},
+            function(data) {
+                $('#tableModelosBody').empty();
+                $.each(data, function(key, element) {
+                    $('#tableModelosBody').append("<tr><td>" + key + "</td><td>" + element + "</td></tr>");
+                    $('#selectModeloABM').append("<option value='" + key + "'>" + element + "</option>");
+                });
+            });
+    });
+
+    $('#selectModeloABM').change(function(){
+        $('#inputVersionABM').removeAttr('disabled');
+        $.get(
+            { url: '/getversiones'},
+            { option: $(this).val()},
+            function(data) {
+                $('#tableVersionesBody').empty();
+                $.each(data, function(key, element) {
+                    $('#tableVersionesBody').append("<tr><td>" + key + "</td><td>" + element + "</td></tr>");
+                });
+            });
+    });
+
+
+
 });
