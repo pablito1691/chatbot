@@ -111,6 +111,8 @@
             }
     ?/>
 
+    
+    <img src="img/auto1.jpg">
 @endsection
 
 
