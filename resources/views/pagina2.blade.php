@@ -72,7 +72,7 @@
         <a href="/" target="_parent" onclick="window.open(this.href,this.target,'width=400,height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;">Ejemplo</a>
 
         <div id="contenido">
-            <img id="img_zoom" src="img/auto1.jpg" alt="Aca esta el auto con zoom" data-big="img/chery_grande.jpg" data-overlay="img/fondo_negro.png" />
+            <img id="img_zoom" src="/img/auto1.jpg" alt="Aca esta el auto con zoom" data-big="/img/chery_grande.jpg" data-overlay="/img/fondo_negro.png" />
         </div>
 
 
