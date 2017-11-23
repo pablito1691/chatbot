@@ -70,7 +70,13 @@
 
            <div class="list-group">
                @foreach($marcas as $marca)
-                   <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{count($marca->modelos)}})</a>
+                   @php ( $count = 0 )
+                   @foreach($marca->modelos as $modelo)
+                       @foreach($modelo->versiones as $version)
+                           @php($count = $count + count($version->vehiculos))
+                       @endforeach
+                   @endforeach
+                   <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{$count}})</a>
                    @if(count($marcas) == 1)
                        <a href="{{url('/')}}"><div class="btn btn-primary">X</div></a>
                    @endif
