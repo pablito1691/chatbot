@@ -37,6 +37,7 @@ Route::get('/admin', function () {
 
 Route::get('/pagina2', function(){
     return view('pagina2')->with('vehiculo',Vehiculo::all());
+
 });
 
 
