@@ -44,7 +44,7 @@
                      {{--alt="No se pudo cargar la imagen">--}}
                 <a href='{{asset('storage/img/'.$vehiculo->imagen_mini)}}' class = 'cloud-zoom' id='zoom1'
                    rel="adjustX: 10, adjustY:-4, softFocus:true">
-                    <img width="500" height="300" id="imagen" src="" class="card-img-top img-fluid"  alt='' align="left" title="Zoom del auto" />
+                    <img width="500" height="300" id="imagen" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" class="card-img-top img-fluid"  alt='' align="left" title="Zoom del auto" />
                 </a>
 
                 <div class="card-body">
