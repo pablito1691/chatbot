@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app')
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-</head>
-
-<body>
-
-<nav class="navbar">
-    PANEL DE ADMINISTRACION
-</nav>
+@section('content')
 
 <div class="container">
 
@@ -95,9 +84,29 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="control-label">Imagen mini</label>
-                                        <input name="imagen" type="file" class="form-control">
+                                        <label class="control-label">Imagen Mini</label>
+                                        <input name="imagen_mini" type="file" class="form-control">
                                     </div>
+                                </div>
+                                <div id="imgList">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Imagen 1</label>
+                                            <input name="imagen[]" type="file" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Imagen 2</label>
+                                            <input name="imagen[]" type="file" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="control-label">Agregar mas imagenes</label>
+                                    <button type="button" class="btn btn-primary" id="addImg">
+                                        +
+                                    </button>
                                 </div>
 
                                 {{csrf_field()}}
@@ -113,14 +122,4 @@
 
 </div>
 
-<script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-
-<script src="http://carlosdeoliveira.net/jcombo/jquery.jCombo.min.js"></script>
-<script src="js/admin.js"></script>
-
-</body>
-
-</html>
+@endsection

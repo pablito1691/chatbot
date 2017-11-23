@@ -1,6 +1,8 @@
 
 
 $(document).ready(function(){
+
+
     $('#selectMarca').change(function(){
         $.get(
             { url: 'getmodelos'},
@@ -27,16 +29,3 @@ $(document).ready(function(){
             });
     });
 });
-
-
-// $("#selectModelo").jCombo({
-//     url: "getCities.php",
-//     input_param: "id",
-//     parent: "#state2",
-//     onChange: function(newvalue) {
-//         $("#message").text("parent has changed to value " + newvalue)
-//             .fadeIn("fast",function() {
-//                 $(this).fadeOut(3500);
-//             });
-//     }
-// });

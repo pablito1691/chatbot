@@ -59,7 +59,7 @@
 
       <div class="row">
 
-        <div class="col-lg-3">
+        <div class="col-lg-2 col-md-2">
 
             <div id="filtrosList">
 
@@ -70,7 +70,13 @@
 
            <div class="list-group">
                @foreach($marcas as $marca)
-                   <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{count($marca->modelos)}})</a>
+                   @php ( $count = 0 )
+                   @foreach($marca->modelos as $modelo)
+                       @foreach($modelo->versiones as $version)
+                           @php($count = $count + count($version->vehiculos))
+                       @endforeach
+                   @endforeach
+                   <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{$count}})</a>
                    @if(count($marcas) == 1)
                        <a href="{{url('/')}}"><div class="btn btn-primary">X</div></a>
                    @endif
@@ -80,7 +86,11 @@
             <h3 class="my-4">Modelos</h3>
            <div class="list-group">
                @foreach($modelos as $modelo)
-                   <a href="/{{$modelo->idmodelos}}/{{$modelo->marca->idmarcas}}/vehiculos" class="list-group-item">{{$modelo->descripcion}}</a>
+                   @php ( $count = 0 )
+                   @foreach($modelo->versiones as $version)
+                       @php($count = $count + count($version->vehiculos))
+                   @endforeach
+                   <a href="/{{$modelo->marca->idmarcas}}/{{$modelo->idmodelos}}/vehiculos" class="list-group-item">{{$modelo->descripcion}} ({{$count}})</a>
                    @if(count($modelos) == 1)
                        <a href="{{url('/'.$modelo->marca->idmarcas.'/vehiculos')}}"><div class="btn btn-primary">X</div></a>
                    @endif
@@ -90,7 +100,7 @@
          </div>
          <!-- /.col-lg-3 -->
 
-        <div class="col-lg-9">
+        <div class="col-lg-10 col-md-10">
           <!-- foreach($conjunto as $variable)
            {
            // operar con la variable;
