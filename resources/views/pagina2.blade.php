@@ -113,7 +113,7 @@
     {{--?/>--}}
 
     
-    <img src="img/auto1.jpg" alt="No se puede cargar la foto">
+    <img src="public/img/auto1.jpg" alt="No se puede cargar la foto">
     </div>
 @endsection
 
