@@ -45,6 +45,7 @@
                 <a href='{{asset('storage/img/'.$vehiculo->imagen_mini)}}' class = 'cloud-zoom' id='zoom1'
                    rel="adjustX: 10, adjustY:-4, softFocus:true">
                     <img width="500" height="300" id="imagen" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" class="card-img-top img-fluid"  alt='' align="left" title="Zoom del auto" />
+                </a>
 
                 <div class="card-body">
                     <h3 class="card-title">{{$vehiculo->version->descripcion}}</h3>
