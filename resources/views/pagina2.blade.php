@@ -31,7 +31,7 @@
                                      {{--alt="No se pudo cargar la imagen"></a>--}}
                     <a href='{{asset('storage/img/'.$imagenes->ruta)}}' class='cloud-zoom-gallery' title='Thumbnail 1'
                        rel="useZoom: 'zoom1', smallImage: '{{asset('storage/img/'.$imagenes->ruta)}}' ">
-                        <img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100" src="" alt = "Thumbnail 1"/></a>
+                        <img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}" alt = "Thumbnail 1"/></a>
                     <p></p>
                 </div>
             @endforeach
@@ -42,7 +42,7 @@
             <div class="card mt-4">
                 {{--<img width="500" height="300" id="imagen" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"--}}
                      {{--alt="No se pudo cargar la imagen">--}}
-                <a href='{{asset('storage/img/'.$vehiculo->imagen_mini)}}' class = 'cloud-zoom' id='zoom1'
+                <a href='' class = 'cloud-zoom' id='zoom1'
                    rel="adjustX: 10, adjustY:-4, softFocus:true">
                     <img width="500" height="300" id="imagen" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" class="card-img-top img-fluid"  alt='' align="left" title="Zoom del auto" />
                 </a>
