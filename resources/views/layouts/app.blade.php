@@ -19,6 +19,16 @@
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
+    <style>
+        hr {
+            border: 0;
+            clear:both;
+            display:block;
+            width: 96%;
+            background-color:#000000;
+            height: 1px;
+        }
+    </style>
     <!--href vehiculo/id vehiculo-->
 
 </head>

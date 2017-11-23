@@ -52,6 +52,8 @@
                                     </form>
                                 </div>
 
+                                <hr>
+
                                 <div class="col-lg-12">
                                     <h2>Modelos</h2>
                                 </div>
@@ -69,11 +71,11 @@
                                     </table>
                                 </div>
                                 <div class="col-lg-6">
-                                    <form action="admin/marcas" method="post">
+                                    <form action="modelos" method="post">
                                         <div class="form-group">
                                             <label class="control-label">Seleccione la marca a la que quiere agregar el
                                                 modelo</label>
-                                            <select name="version" id="selectMarcaABM" class="form-control">
+                                            <select name="marca" id="selectMarcaABM" class="form-control">
                                                 <option value="0">----Seleccione una marca----</option>
                                                 @foreach($marcas as $marca)
                                                     <option value="{{$marca->idmarcas}}">{{$marca->descripcion}}</option>
@@ -85,8 +87,11 @@
                                             <input disabled id="inputModeloABM" name="modelo" class="form-control">
                                         </div>
                                         <button class="btn btn-primary">Agregar</button>
+                                        {{csrf_field()}}
                                     </form>
                                 </div>
+
+                                <hr>
 
                                 <div class="col-lg-12">
                                     <h2>Versiones</h2>
@@ -104,11 +109,11 @@
                                     </table>
                                 </div>
                                 <div class="col-lg-6">
-                                    <form action="vehiculos" method="post" enctype="multipart/form-data">
+                                    <form action="versiones" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label class="control-label">Seleccione el modelo al que quiere agregar la
                                                 version</label>
-                                            <select name="version" id="selectModeloABM" class="form-control">
+                                            <select name="modelo" id="selectModeloABM" class="form-control">
                                                 <option value="0">----Seleccione un Modelo----</option>
                                             </select>
                                         </div>
@@ -117,6 +122,7 @@
                                             <input disabled id="inputVersionABM" name="version" class="form-control">
                                         </div>
                                         <button class="btn btn-primary">Agregar</button>
+                                        {{csrf_field()}}
                                     </form>
                                 </div>
                             </div>
