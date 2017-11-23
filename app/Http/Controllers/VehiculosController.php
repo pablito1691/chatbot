@@ -51,7 +51,6 @@ class VehiculosController extends Controller
         $vehiculo->save();
 
         if ($request->hasFile('imagen')) {
-            if($request->file('imagen')->isValid()) {
                 $imagenes = $request->file('imagen');
                 foreach ($imagenes as $imagen) {
                     $nombreImagen = $imagen->hashName();
@@ -61,12 +60,8 @@ class VehiculosController extends Controller
                     $imagen->ruta = $nombreImagen;
                     $imagen->save();
                 }
-
-            }
         }
 
-        $imagen->vehiculos_idvehiculos = $vehiculo->idvehiculos;
-//        $imagen->save();
 
         return back();
 

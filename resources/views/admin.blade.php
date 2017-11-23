@@ -2,22 +2,22 @@
 
 @section('content')
 
-<div class="container">
+<div class="container-fluid">
 
     <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <ul class="list-group">
                 <li class="list-group-item"><a href="#">ABM Marcas</a></li>
                 <li class="list-group-item"><a href="#">ABM Modelos</a></li>
                 <li class="list-group-item"><a href="#">ABM Versiones</a></li>
             </ul>
         </div>
-        <div class="col-lg-10">
-            <div class="card card-default">
+        <div class="col-lg-6">
+            <div class="card">
                 <div class="card-header">
                     <h3>Carga de vehiculos</h3>
                 </div>
-                <div class="card-body">
+                <div class="card-block">
                     <div class="col-lg-12">
                         <form action="vehiculos" method="post" enctype="multipart/form-data">
                             <div class="row">
@@ -88,7 +88,6 @@
                                         <input name="imagen_mini" type="file" class="form-control">
                                     </div>
                                 </div>
-                                <div id="imgList">
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="control-label">Imagen 1</label>
@@ -101,12 +100,17 @@
                                             <input name="imagen[]" type="file" class="form-control">
                                         </div>
                                     </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Imagen 3</label>
+                                        <input name="imagen[]" type="file" class="form-control">
+                                    </div>
                                 </div>
-                                <div class="col-lg-3">
-                                    <label class="control-label">Agregar mas imagenes</label>
-                                    <button type="button" class="btn btn-primary" id="addImg">
-                                        +
-                                    </button>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Imagen 4</label>
+                                        <input name="imagen[]" type="file" class="form-control">
+                                    </div>
                                 </div>
 
                                 {{csrf_field()}}
