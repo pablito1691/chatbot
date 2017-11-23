@@ -76,7 +76,9 @@
                            @php($count = $count + count($version->vehiculos))
                        @endforeach
                    @endforeach
-                   <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{$count}})</a>
+                    @if($count > 0)
+                       <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{$count}})</a>
+                    @endif
                    @if(count($marcas) == 1)
                        <a href="{{url('/')}}"><div class="btn btn-primary">X</div></a>
                    @endif
@@ -90,7 +92,10 @@
                    @foreach($modelo->versiones as $version)
                        @php($count = $count + count($version->vehiculos))
                    @endforeach
-                   <a href="/{{$modelo->marca->idmarcas}}/{{$modelo->idmodelos}}/vehiculos" class="list-group-item">{{$modelo->descripcion}} ({{$count}})</a>
+                   @if($count > 0)
+                       <a href="/{{$modelo->marca->idmarcas}}/{{$modelo->idmodelos}}/vehiculos" class="list-group-item">{{$modelo->descripcion}} ({{$count}})</a>
+                   @endif
+
                    @if(count($modelos) == 1)
                        <a href="{{url('/'.$modelo->marca->idmarcas.'/vehiculos')}}"><div class="btn btn-primary">X</div></a>
                    @endif
