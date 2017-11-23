@@ -13,14 +13,14 @@
             <div class="col-lg-3">
                 <h1 class="my-4">Fotos</h1>
 
-                @foreach($vehiculo->imagenes as $imagenes)
-                    <div class="list-group">
-                        <a href="#"><img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
-                                         alt="No se pudo cargar la imagen"></a>
-                        <p></p>
-                    </div>
-                @endforeach
-            </div>
+                {{--@foreach($vehiculo->imagenes as $imagenes)--}}
+                    {{--<div class="list-group">--}}
+                        {{--<a href="#"><img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"--}}
+                                         {{--alt="No se pudo cargar la imagen"></a>--}}
+                        {{--<p></p>--}}
+                    {{--</div>--}}
+                {{--@endforeach--}}
+            {{--</div>--}}
 
 
             <!-- /.col-lg-3 -->
@@ -69,7 +69,7 @@
         </div>
 
         <p> </p>
-        <a href="/pagina2" target="_parent" onclick="window.open(this.href,this.target,'width=400,height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;">Ejemplo</a>
+        <a href="/" target="_parent" onclick="window.open(this.href,this.target,'width=400,height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no');return false;">Ejemplo</a>
 
         <div id="contenido">
             <img id="img_zoom" src="img/auto1.jpg" alt="Aca esta el auto con zoom" data-big="img/chery_grande.jpg" data-overlay="img/fondo_negro.png" />
