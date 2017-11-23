@@ -37,6 +37,7 @@ $(document).ready(function(){
             function(data) {
                 $('#tableModelosBody').empty();
                 $('#selectModeloABM').empty();
+                $('#selectModeloABM').append("<option>----Seleccione el modelo-----</option>");
                 $.each(data, function(key, element) {
                     $('#tableModelosBody').append("<tr><td>" + key + "</td><td>" + element + "</td></tr>");
                     $('#selectModeloABM').append("<option value='" + key + "'>" + element + "</option>");

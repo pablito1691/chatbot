@@ -15,6 +15,7 @@ use App\Color;
 use App\Marca;
 use App\Modelo;
 use App\Vehiculo;
+use App\Version;
 use Illuminate\Support\Facades\Input;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -59,7 +60,23 @@ Route::post('/admin/modelos', function (Request $request) {
     $modelo = new Modelo();
     $modelo->descripcion = $request->get('modelo');
 
-    $marca->save();
+    $modelo->marcas_idmarcas = $request->get('marca');
+
+    $modelo->save();
+
+    return view('gestion')
+        ->with('marcas', Marca::all())
+        ->with('colores', Color::all());
+})->middleware('auth');
+
+Route::post('/admin/versiones', function (Request $request) {
+
+    $version = new Version();
+    $version->descripcion = $request->get('version');
+
+    $version->modelos_idmodelos = $request->get('modelo');
+
+    $version->save();
 
     return view('gestion')
         ->with('marcas', Marca::all())
