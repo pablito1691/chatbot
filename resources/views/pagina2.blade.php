@@ -18,9 +18,6 @@
 </head>
 <body>
 
-
-
-
 <div class="container">
 
     <div class="row">
@@ -67,37 +64,6 @@
 </div>
 
 
-
-
-
-
-<a href='img/bigimage01.jpg' class = 'cloud-zoom' id='zoom1'
-   rel="adjustX: 10, adjustY:-4, softFocus:true">
-    <img src="img/smallimage-1.jpg" alt='' align="left" title="Zoom del auto" />
-</a>
-
-
-
-<p>Seleccione la foto para hacerle alto zoom</p>
-
-<!--
-        You can optionally create a gallery by creating anchors with a class of 'cloud-zoom-gallery'.
-        The anchor's href should point to the big zoom image.
-        In the rel attribute you must specify the id of the zoom to use (useZoom: 'zoom1'),
-        and also the small image to use (smallImage: /images/....)
-        -->
-
-<a href='img/bigimage03.jpg' class='cloud-zoom-gallery' title='Thumbnail 1'
-   rel="useZoom: 'zoom3', smallImage: 'img/smallimage-3.jpg' ">
-    <img src="img/tinyimage-3.jpg" alt = "Thumbnail 1"/></a>
-
-<a href='img/bigimage01.jpg' class='cloud-zoom-gallery' title='Thumbnail 2'
-   rel="useZoom: 'zoom2', smallImage: ' img/smallimage-1.jpg'">
-    <img src="img/tinyimage-1.jpg" alt = "Thumbnail 2"/></a>
-
-<a href='img/bigimage02.jpg' class='cloud-zoom-gallery' title='Thumbnail 3'
-   rel="useZoom: 'zoom1', smallImage: 'img/smallimage-2.jpg' ">
-    <img src="img/tinyimage-2.jpg" alt = "Thumbnail 3"/></a>
 
 </body>
 
