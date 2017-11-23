@@ -129,7 +129,7 @@ Route::get('/vehiculoDetalle', function () {
 });
 
 Route::get('/pagina2', function(){
-    return view('pagina2')->with('vehiculos',Vehiculo::all());
+    return view('pagina2')->with('vehiculo',Vehiculo::all());
 
 });
 
