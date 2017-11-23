@@ -121,17 +121,11 @@ Route::get('/vehiculo/{id}', function ($id) {
 
     $vehiculo = Vehiculo::where('idvehiculos',$id)->first();
 
-    return view('vehiculoDetalle')->with('vehiculo', $vehiculo);
+    return view('pagina2')->with('vehiculo', $vehiculo);
 });
 
-Route::get('/vehiculoDetalle', function () {
-    return view('vehiculoDetalle')->with('vehiculos',Vehiculo::all());
-});
 
-Route::get('/pagina2', function(){
-    return view('pagina2')->with('vehiculo',Vehiculo::all());
 
-});
 
 Route::get('/prueba', function () {
     return view('codigosPrueba');
