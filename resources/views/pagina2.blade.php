@@ -80,6 +80,7 @@
 
     </div>
 
+
     <script type="text/javascript">
         $(document).ready(function()
         {
@@ -99,20 +100,21 @@
 
 
 
-    <php
-            #contenido {
-            position: relative;
-            width: 640px;
-            height: auto;
-            margin: 20px auto;
-            border: 12px solid #fff;
-            border-radius: 10px;
-            box-shadow: 1px 1px 5px rgba(50,50,50 0.5);
-            }
-    ?/>
+    {{--<php--}}
+            {{--#contenido {--}}
+            {{--position: relative;--}}
+            {{--width: 640px;--}}
+            {{--height: auto;--}}
+            {{--margin: 20px auto;--}}
+            {{--border: 12px solid #fff;--}}
+            {{--border-radius: 10px;--}}
+            {{--box-shadow: 1px 1px 5px rgba(50,50,50 0.5);--}}
+            {{--}--}}
+    {{--?/>--}}
 
     
     <img src="img/auto1.jpg">
+    </div>
 @endsection
 
 
