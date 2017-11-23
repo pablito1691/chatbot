@@ -1,6 +1,8 @@
 
 
 $(document).ready(function(){
+
+
     $('#selectMarca').change(function(){
         $.get(
             { url: 'getmodelos'},
@@ -26,28 +28,4 @@ $(document).ready(function(){
                 });
             });
     });
-
-    $('#addImg').on('click', function (e) {
-        e.preventDefault();
-        console.log('click');
-        $('#imgList').append('<div class="col-lg-3">\n' +
-            '                                        <div class="form-group">\n' +
-            '                                            <label class="control-label">Imagen 2</label>\n' +
-            '                                            <input name="imagen[]" type="file" class="form-control">\n' +
-            '                                        </div>\n' +
-            '                                    </div>')
-    });
 });
-
-
-// $("#selectModelo").jCombo({
-//     url: "getCities.php",
-//     input_param: "id",
-//     parent: "#state2",
-//     onChange: function(newvalue) {
-//         $("#message").text("parent has changed to value " + newvalue)
-//             .fadeIn("fast",function() {
-//                 $(this).fadeOut(3500);
-//             });
-//     }
-// });
