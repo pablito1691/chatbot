@@ -81,6 +81,9 @@
            <div class="list-group">
                @foreach($modelos as $modelo)
                    <a href="/{{$modelo->idmodelos}}/{{$modelo->marca->idmarcas}}/vehiculos" class="list-group-item">{{$modelo->descripcion}}</a>
+                   @if(count($modelos) == 1)
+                       <a href="{{url('/'.$modelo->marca->idmarcas.'/vehiculos')}}"><div class="btn btn-primary">X</div></a>
+                   @endif
                @endforeach
            </div>
 

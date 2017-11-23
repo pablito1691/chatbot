@@ -66,6 +66,30 @@ Route::get('{marca}/vehiculos', function ($marca) {
         ->with('marcas', $marcas)
         ->with('modelos', $modelos);
 });
+Route::get('{marca}/{modelo}/vehiculos', function ($marca, $modelo) {
+    $vehiculos = array();
+
+    $marca = Marca::where('idmarcas', $marca)->first();
+    $modelo = Modelo::where('idmodelos', $modelo)->first();
+    foreach ($modelo->versiones as $version) {
+        foreach ($version->vehiculos as $vehiculo) {
+            array_push($vehiculos, $vehiculo);
+        }
+    }
+
+    $marcas = array();
+    $modelos = array();
+    array_push($marcas, $marca);
+    array_push($modelos, $modelo);
+
+    $vehiculosDestacados = Vehiculo::where('destacado', 1)->get();
+
+    return view('index')
+        ->with('vehiculos', $vehiculos)
+        ->with('vehiculos_destacados', $vehiculosDestacados)
+        ->with('marcas', $marcas)
+        ->with('modelos', $modelos);
+});
 
 
 Route::get('getmodelos', function(){
