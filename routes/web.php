@@ -16,6 +16,7 @@ use App\Marca;
 use App\Modelo;
 use App\Vehiculo;
 use Illuminate\Support\Facades\Input;
+use Symfony\Component\HttpFoundation\Request;
 
 Route::get('/', function () {
 
@@ -35,7 +36,35 @@ Route::get('/admin', function () {
         ->with('colores', Color::all());
 })->middleware('auth');
 
+Route::get('/admin/bases', function () {
+    return view('gestion')
+        ->with('marcas', Marca::all())
+        ->with('colores', Color::all());
+})->middleware('auth');
 
+Route::post('/admin/marcas', function (Request $request) {
+
+    $marca = new Marca();
+    $marca->descripcion = $request->get('marca');
+
+    $marca->save();
+
+    return view('gestion')
+        ->with('marcas', Marca::all())
+        ->with('colores', Color::all());
+})->middleware('auth');
+
+Route::post('/admin/modelos', function (Request $request) {
+
+    $modelo = new Modelo();
+    $modelo->descripcion = $request->get('modelo');
+
+    $marca->save();
+
+    return view('gestion')
+        ->with('marcas', Marca::all())
+        ->with('colores', Color::all());
+})->middleware('auth');
 
 
 Route::resource('vehiculos', 'VehiculosController');

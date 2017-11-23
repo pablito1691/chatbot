@@ -7,9 +7,8 @@
     <div class="row">
         <div class="col-lg-3">
             <ul class="list-group">
-                <li class="list-group-item"><a href="#">ABM Marcas</a></li>
-                <li class="list-group-item"><a href="#">ABM Modelos</a></li>
-                <li class="list-group-item"><a href="#">ABM Versiones</a></li>
+                <li class="list-group-item"><a href="{{url('admin')}}">Agregar vehiculo</a></li>
+                <li class="list-group-item"><a href="{{url('admin/bases')}}">Gestion de base</a></li>
             </ul>
         </div>
         <div class="col-lg-6">
