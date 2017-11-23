@@ -84,9 +84,29 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="control-label">Imagen mini</label>
-                                        <input name="imagen" type="file" class="form-control">
+                                        <label class="control-label">Imagen Mini</label>
+                                        <input name="imagen_mini" type="file" class="form-control">
                                     </div>
+                                </div>
+                                <div id="imgList">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Imagen 1</label>
+                                            <input name="imagen[]" type="file" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Imagen 2</label>
+                                            <input name="imagen[]" type="file" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="control-label">Agregar mas imagenes</label>
+                                    <button type="button" class="btn btn-primary" id="addImg">
+                                        +
+                                    </button>
                                 </div>
 
                                 {{csrf_field()}}
@@ -102,4 +122,4 @@
 
 </div>
 
-    @endsection
+@endsection
