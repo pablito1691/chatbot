@@ -59,17 +59,20 @@
       <div class="row">
 
         <div class="col-lg-3">
-          <!-- foreach($conjunto as $variable)
-           {
-           // operar con la variable;
-           }-->
+
+            <div id="filtrosList">
+
+            </div>
+
            <h3 class="my-4">Marcas</h3>
 
 
            <div class="list-group">
                @foreach($marcas as $marca)
                    <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{count($marca->modelos)}})</a>
-
+                   @if(count($marcas) == 1)
+                       <a href="{{url('/')}}"><div class="btn btn-primary">X</div></a>
+                   @endif
                @endforeach
            </div>
 

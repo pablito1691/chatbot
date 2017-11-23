@@ -55,12 +55,15 @@ Route::get('{marca}/vehiculos', function ($marca) {
         }
     }
 
+    $marcas = array();
+    array_push($marcas, $marca);
+
     $vehiculosDestacados = Vehiculo::where('destacado', 1)->get();
 
     return view('index')
         ->with('vehiculos', $vehiculos)
         ->with('vehiculos_destacados', $vehiculosDestacados)
-        ->with('marcas', Marca::all())
+        ->with('marcas', $marcas)
         ->with('modelos', $modelos);
 });
 
