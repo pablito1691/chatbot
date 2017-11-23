@@ -16,6 +16,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <img class="img-responsive" src="" id="imgPopup" style="max-width: 450px">
+                                <p></p>
 
                                 <form id="consultaForm" action="{{url('admin/consultas')}}" method="POST" enctype="multipart/form-data">
                                     <div class="form-group" id="formNombre">
