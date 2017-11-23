@@ -35,10 +35,7 @@ Route::get('/admin', function () {
         ->with('colores', Color::all());
 })->middleware('auth');
 
-Route::get('/pagina2', function(){
-    return view('pagina2')->with('vehiculo',Vehiculo::all());
 
-});
 
 
 Route::resource('vehiculos', 'VehiculosController');
@@ -129,6 +126,11 @@ Route::get('/vehiculo/{id}', function ($id) {
 
 Route::get('/vehiculoDetalle', function () {
     return view('vehiculoDetalle')->with('vehiculos',Vehiculo::all());
+});
+
+Route::get('/pagina2', function(){
+    return view('pagina2')->with('vehiculos',Vehiculo::all());
+
 });
 
 Route::get('/prueba', function () {

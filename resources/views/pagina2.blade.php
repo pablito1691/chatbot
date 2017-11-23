@@ -17,36 +17,53 @@
 
 </head>
 <body>
-<div class="row">
 
-    <div class="col-lg-3">
-        <h1 class="my-4">Fotos</h1>
 
-        @foreach($vehiculo->imagenes as $imagenes)
-            <div class="list-group">
-                <a href="#"><img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
-                                 alt="No se pudo cargar la imagen"></a>
-                <p></p>
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-3">
+            <h1 class="my-4">Fotos</h1>
+
+            @foreach($vehiculo->imagenes as $imagenes)
+                <div class="list-group">
+                    <a href="#"><img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"
+                                     alt="No se pudo cargar la imagen"></a>
+                    <p></p>
+                </div>
+            @endforeach
+        </div>
+
+        <div class="col-lg-9">
+
+            <div class="card mt-4">
+                <img width="900" height="400" id="imagen" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
+                     alt="No se pudo cargar la imagen">
+                <div class="card-body">
+                    <h3 class="card-title">{{$vehiculo->version->descripcion}}</h3>
+                    <h4>{{$vehiculo->precio}}</h4>
+                    <p class="card-text">{{$vehiculo->descripcion}}</p>
+                </div>
             </div>
-        @endforeach
+
+        </div>
+
+
     </div>
 
 
-    <!-- /.col-lg-3 -->
 
-    <div class="col-lg-9">
+</div>
 
-        <div class="card mt-4">
-            <img width="900" height="400" id="imagen" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
-                 alt="No se pudo cargar la imagen">
-            <div class="card-body">
-                <h3 class="card-title">{{$vehiculo->version->descripcion}}</h3>
-                <h4>{{$vehiculo->precio}}</h4>
-                <p class="card-text">{{$vehiculo->descripcion}}</p>
-            </div>
-        </div>
 
-<a href='img/bigimage00.jpg' class = 'cloud-zoom' id='zoom1'
+
+
+
+
+<a href='img/bigimage01.jpg' class = 'cloud-zoom' id='zoom1'
    rel="adjustX: 10, adjustY:-4, softFocus:true">
     <img src="img/smallimage-1.jpg" alt='' align="left" title="Zoom del auto" />
 </a>
@@ -62,16 +79,16 @@
         and also the small image to use (smallImage: /images/....)
         -->
 
-<a href='img/bigimage00.jpg' class='cloud-zoom-gallery' title='Thumbnail 1'
-   rel="useZoom: 'zoom1', smallImage: 'img/smallimage-1.jpg' ">
-    <img src="img/tinyimage.jpg" alt = "Thumbnail 1"/></a>
+<a href='img/bigimage03.jpg' class='cloud-zoom-gallery' title='Thumbnail 1'
+   rel="useZoom: 'zoom3', smallImage: 'img/smallimage-3.jpg' ">
+    <img src="img/tinyimage-3.jpg" alt = "Thumbnail 1"/></a>
 
 <a href='img/bigimage01.jpg' class='cloud-zoom-gallery' title='Thumbnail 2'
-   rel="useZoom: 'zoom1', smallImage: ' img/smallimage-2.jpg'">
+   rel="useZoom: 'zoom2', smallImage: ' img/smallimage-1.jpg'">
     <img src="img/tinyimage-1.jpg" alt = "Thumbnail 2"/></a>
 
 <a href='img/bigimage02.jpg' class='cloud-zoom-gallery' title='Thumbnail 3'
-   rel="useZoom: 'zoom1', smallImage: 'img/smallimage-3.jpg' ">
+   rel="useZoom: 'zoom1', smallImage: 'img/smallimage-2.jpg' ">
     <img src="img/tinyimage-2.jpg" alt = "Thumbnail 3"/></a>
 
 </body>
