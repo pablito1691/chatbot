@@ -37,7 +37,7 @@
             @endforeach
         </div>
 
-        <div class="col-lg-9">
+        <div class="col-lg-6">
 
             <div class="card mt-4">
                 {{--<img width="500" height="300" id="imagen" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"--}}
