@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid" style="margin-right: 10%; margin-left: 10%">
 
 
     <div class="row">
@@ -27,45 +27,51 @@
 
             <div class="card">
                 <div class="card-header">
-
+                    <h2>{{$vehiculo->version->modelo->marca->descripcion}} {{$vehiculo->version->modelo->descripcion}} - {{$vehiculo->version->descripcion}}</h2>
                 </div>
                 <div class="card-block">
                     <div class="container-fluid">
                         <div class="row">
 
-                            <div class="col-lg-2">
-                                <h1 class="my-4">Fotos</h1>
-
-                                @foreach($vehiculo->imagenes as $imagenes)
-                                    <div class="list-group">
-                                        {{--<a href="#"><img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100" src="{{asset('storage/img/'.$imagenes->ruta)}}"--}}
-                                        {{--alt="No se pudo cargar la imagen"></a>--}}
-                                        <a href='{{asset('storage/img/'.$imagenes->ruta)}}' class='cloud-zoom-gallery'
-                                           title='Thumbnail 1'
-                                           rel="useZoom: 'zoom1', smallImage: '{{asset('storage/img/'.$imagenes->ruta)}}' ">
-                                            <img onmouseover="hacerClick()" class="imagen_mini" width="100" height="100"
-                                                 src="{{asset('storage/img/'.$imagenes->ruta)}}" alt="Thumbnail 1"/></a>
-                                        <p></p>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2>Fotos</h2>
                                     </div>
-                                @endforeach
+                                    <div class="card-block">
+                                        <ul class="list-group list-group-flush">
+                                            @foreach($vehiculo->imagenes as $imagenes)
+                                                <li class="list-group-item">
+                                                    <a href='{{asset('storage/img/'.$imagenes->ruta)}}'
+                                                       class='cloud-zoom-gallery'
+                                                       title='Thumbnail 1'
+                                                       rel="useZoom: 'zoom1', smallImage: '{{asset('storage/img/'.$imagenes->ruta)}}' ">
+                                                        <img onmouseover="hacerClick()"
+                                                             class="imagen_mini img-responsive" style="max-width: 100%"
+                                                             src="{{asset('storage/img/'.$imagenes->ruta)}}"
+                                                             alt="Thumbnail 1"/></a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-5">
 
                                 <div class="card">
-                                    {{--<img width="500" height="300" id="imagen" class="card-img-top img-fluid" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"--}}
-                                    {{--alt="No se pudo cargar la imagen">--}}
                                     <a href='{{asset('storage/img/'.$vehiculo->imagen_mini)}}' class='cloud-zoom'
                                        id='zoom1'
                                        rel="adjustX: 10, adjustY:-4, softFocus:true">
-                                        <img width="500" height="300" id="imagen"
+                                        <img id="imagen"
                                              src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
                                              class="card-img-top img-fluid" alt='' align="left" title="Zoom del auto"/>
                                     </a>
 
-                                    <div class="card-body">
-                                        <h3 class="card-title">{{$vehiculo->version->descripcion}}</h3>
-                                        <h4>{{$vehiculo->precio}}</h4>
+                                    <div class="card-block">
+                                        <h3 class="card-title">{{$vehiculo->version->modelo->marca->descripcion}} {{$vehiculo->version->modelo->descripcion}} - {{$vehiculo->version->descripcion}}</h3>
+                                        <h4>Precio ${{$vehiculo->precio}}</h4>
+                                        <h4>Kilometros: {{$vehiculo->kilometros}}</h4>
                                         <p class="card-text">{{$vehiculo->descripcion}}</p>
                                     </div>
                                 </div>
@@ -106,6 +112,19 @@
                                 </div>
                             </div>
 
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2>Ficha técnica</h2>
+                                    </div>
+                                    <div class="card-block">
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
