@@ -120,6 +120,40 @@
                                         <h2>Ficha técnica</h2>
                                     </div>
                                     <div class="card-block">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item justify-content-between list-group-item-success">
+                                                        Levantavidrios electricos
+                                                        <span class="badge badge-default badge-pill">SI</span>
+                                                    </li>
+                                                    <li class="list-group-item justify-content-between list-group-item-success">
+                                                        ABS
+                                                        <span class="badge badge-default badge-pill">SI</span>
+                                                    </li>
+                                                    <li class="list-group-item justify-content-between list-group-item-warning">
+                                                        Climatizador bi-zona
+                                                        <span class="badge badge-default badge-pill">NO</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item justify-content-between list-group-item-success">
+                                                        Levantavidrios electricos
+                                                        <span class="badge badge-default badge-pill">SI</span>
+                                                    </li>
+                                                    <li class="list-group-item justify-content-between list-group-item-success">
+                                                        ABS
+                                                        <span class="badge badge-default badge-pill">SI</span>
+                                                    </li>
+                                                    <li class="list-group-item justify-content-between list-group-item-warning">
+                                                        Climatizador bi-zona
+                                                        <span class="badge badge-default badge-pill">NO</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
