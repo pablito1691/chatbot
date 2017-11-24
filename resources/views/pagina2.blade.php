@@ -27,7 +27,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h2>{{$vehiculo->version->modelo->marca->descripcion}} {{$vehiculo->version->modelo->descripcion}} - {{$vehiculo->version->descripcion}}</h2>
+                    <h2>{{$vehiculo->version->modelo->marca->descripcion}} {{$vehiculo->version->modelo->descripcion}} - {{$vehiculo->version->descripcion}} - {{$vehiculo->year}}</h2>
                 </div>
                 <div class="card-block">
                     <div class="container-fluid">
@@ -69,7 +69,7 @@
                                     </a>
 
                                     <div class="card-block">
-                                        <h3 class="card-title">{{$vehiculo->version->modelo->marca->descripcion}} {{$vehiculo->version->modelo->descripcion}} - {{$vehiculo->version->descripcion}}</h3>
+                                        <h3 class="card-title">{{$vehiculo->version->modelo->marca->descripcion}} {{$vehiculo->version->modelo->descripcion}} - {{$vehiculo->version->descripcion}} - {{$vehiculo->year}}</h3>
                                         <h4>Precio ${{$vehiculo->precio}}</h4>
                                         <h4>Kilometros: {{$vehiculo->kilometros}}</h4>
                                         <p class="card-text">{{$vehiculo->descripcion}}</p>
