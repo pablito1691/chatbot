@@ -1,231 +1,35 @@
-@extends('layouts.app')
+<html>
 
-@section('content')
+    <head>
+        <title>Chat Bot Leon Alperovich</title>
 
-    <div id="modalConsulta" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/funciones.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Modal Header</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <img class="img-responsive" src="" id="imgPopup" style="max-width: 450px">
-                                <p></p>
 
-                                <form id="consultaForm" action="{{url('admin/consultas')}}" method="POST" enctype="multipart/form-data">
-                                    <div class="form-group" id="formNombre">
-                                        <input class="form-control" type="text" name="nombre" id="inputNombre" placeholder="Nombre*">
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-group" id="formEmail">
-                                            <input class="form-control" type="email" name="email" id="inputEmail" placeholder="Email*">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-group" id="formTelefono">
-                                            <input class="form-control" type="text" name="telefono" id="inputTelefono" placeholder="Telefono*">
-                                        </div>
-                                    </div>
-                                    <div class="form-group" id="formMensaje">
-                                        <textarea name="mensaje" id="textMensaje" class="form-control"
-                                                  maxlength="499"rows="4" placeholder="Mensaje*"></textarea>
-                                    </div>
+    </head>
 
-                                    <input type="hidden" id="hiddenVehiculo" name="vehiculo">
+    <body>
 
-                                    {{ csrf_field() }}
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="confirmConsulta" class="btn btn-primary btn-block" data-dismiss="modal">Enviar Consulta</button>
-                </div>
-            </div>
-
-        </div>
+    <div id="header">
+            <h1> Chat Bot</h1>
+    </div>
+    <div class="chat_box">
+    <div class="chat_head">Leon Alperovich <div class="close" onclick="cerrar()"> X </div>
+    </div>
+    <div id="container">
+        <textarea id="textbox" placeholder="Ingrese su mensaje aqui..."></textarea>
+        <button id="enviar"> Enviar</button>
     </div>
 
-    <!-- Page Content -->
-    <div class="container-fluid" style="background-color: #f7f7f7">
-
-      <div class="row">
-
-        <div class="col-lg-2 col-md-2">
-
-            <div id="filtrosList">
-
-            </div>
-
-           <h3 class="my-4">Marcas</h3>
-
-
-           <div class="list-group">
-               @foreach($marcas as $marca)
-                   @php ( $count = 0 )
-                   @foreach($marca->modelos as $modelo)
-                       @foreach($modelo->versiones as $version)
-                           @php($count = $count + count($version->vehiculos))
-                       @endforeach
-                   @endforeach
-                    @if($count > 0)
-                       <a href="/{{$marca->idmarcas}}/vehiculos" class="list-group-item">{{$marca->descripcion}} ({{$count}})</a>
-                    @endif
-                   @if(count($marcas) == 1)
-                       <a href="{{url('/')}}"><div class="btn btn-primary">X</div></a>
-                   @endif
-               @endforeach
-           </div>
-
-            <h3 class="my-4">Modelos</h3>
-           <div class="list-group">
-               @foreach($modelos as $modelo)
-                   @php ( $count = 0 )
-                   @foreach($modelo->versiones as $version)
-                       @php($count = $count + count($version->vehiculos))
-                   @endforeach
-                   @if($count > 0)
-                       <a href="/{{$modelo->marca->idmarcas}}/{{$modelo->idmodelos}}/vehiculos" class="list-group-item">{{$modelo->descripcion}} ({{$count}})</a>
-                   @endif
-
-                   @if(count($modelos) == 1)
-                       <a href="{{url('/'.$modelo->marca->idmarcas.'/vehiculos')}}"><div class="btn btn-primary">X</div></a>
-                   @endif
-               @endforeach
-           </div>
-
-         </div>
-         <!-- /.col-lg-3 -->
-
-        <div class="col-lg-10 col-md-10">
-          <!-- foreach($conjunto as $variable)
-           {
-           // operar con la variable;
-           }-->
-
-            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-
-
-                <div class="carousel-inner" role="listbox">
-                    @foreach($vehiculos_destacados as $vehiculo)
-
-
-                        @if($loop->index == 0)
-
-                            <div class="item active" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
-                            </div>
-
-                        @else
-
-                            <div class="item" style="background-image: url({{asset('storage/img/'.$vehiculo->imagen_mini)}})">
-                            </div>
-                        @endif
-                    @endforeach
-
-
-
-
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-
-
-            {{--CARDS DE LOS AUTOS--}}
-
-            @foreach($vehiculos as $vehiculo)
-
-            <div class="col-lg-4 col-md-6">
-              <div class="card card-hover" style="margin-bottom: 20px">
-                <img class="card-img-top" style="height: 300px" src="{{asset('storage/img/'.$vehiculo->imagen_mini)}}" alt="">
-                <div class="card-block">
-                  <h4 class="card-title">
-                    <a href="/vehiculo/{{$vehiculo->idvehiculos}}">{{$vehiculo->version->modelo->marca->descripcion}}
-                        {{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}</a>
-                  </h4>
-                  <h5>${{$vehiculo->precio}}</h5>
-                  <h5>Año: {{$vehiculo->year}} - Km: {{$vehiculo->kilometros}}</h5>
-                  <p class="card-text">{{$vehiculo->descripcion}}</p>
-                  <a href="#" data-toggle="modal" data-target="#modalConsulta"
-                     data-modelo="{{$vehiculo->version->modelo->descripcion.' - '.$vehiculo->version->descripcion}}"
-                     data-imagen="{{asset('storage/img/'.$vehiculo->imagen_mini)}}"
-                     class="btn btn-primary btn-block">Consulta!</a>
-                </div>
-                {{--<div class="card-footer">--}}
-                  {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
-                {{--</div>--}}
-
-
-
-              </div>
-            </div>
-            @endforeach
-
-
-
-          </div>
-          <!-- /.row -->
-            {{--{{$vehiculos->links()}}--}}
-
-        </div>
-        <!-- /.col-lg-9 -->
-
-      </div>
-      <!-- /.row -->
-
     </div>
-    <!-- /.container -->
+    <div id ="controls">
+        <input checked="true" type="checkbox" id="enter"/>
+        <label> Enviar con Enter</label>
+    </div>
+    </body>
+</html>
 
-    <style>
 
-        .card-hover card
-        {
-            -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(1);
-            -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(1);
-            -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(1);
-            transition: all 200ms ease-in;
-            transform: scale(1);
-        }
-        .card-hover:hover {
-            box-shadow: 0px 0px 100px #000000;
-            z-index: 1.5;
-            -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(1.03);
-            -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(1.03);
-            -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(1.03);
-            transition: all 200ms ease-in;
-        }
-        .grayscale {
-            -webkit-filter: brightness(1.10) grayscale(100%) contrast(90%);
-            -moz-filter: brightness(1.10) grayscale(100%) contrast(90%);
-            filter: brightness(1.10) grayscale(100%);
-        }
-    </style>
-
-@endsection
-
+{{--Facebook Like Chat Design - Coding part 2--}}
